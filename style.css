@@ -67,14 +67,21 @@ body {
     radial-gradient(ellipse 160px 110px at 38% 12%, rgba(200, 230, 255, 0.25), transparent),
     radial-gradient(ellipse 260px 210px at 65% 92%, rgba(160, 210, 255, 0.18), transparent);
 
-  border: 1px solid #B8860B;
-  outline: 1px solid #FFD700;
-  outline-offset: -5px;
-  box-shadow:
-    0 0 0 2px #DAA520,
-    inset 0 0 0 1px #FFD700,
-    inset 0 0 0 2px #DAA520,
-    0 0 12px rgba(218, 165, 32, 0.1);
+  border: 1.5px solid #B8860B;
+  box-shadow: 0 0 12px rgba(218, 165, 32, 0.1);
+}
+
+.certificate-frame::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  border: 1px solid #FFD700;
+  pointer-events: none;
+  z-index: 3;
+  border-radius: 2px;
 }
 
 .border-ornament {
@@ -86,32 +93,32 @@ body {
 }
 
 .corner-accent-tl {
-  top: 5px;
-  left: 5px;
+  top: 4px;
+  left: 4px;
   border-top: 1.5px solid #FFD700;
   border-left: 1.5px solid #FFD700;
   border-top-left-radius: 3px;
 }
 
 .corner-accent-tr {
-  top: 5px;
-  right: 5px;
+  top: 4px;
+  right: 4px;
   border-top: 1.5px solid #FFD700;
   border-right: 1.5px solid #FFD700;
   border-top-right-radius: 3px;
 }
 
 .corner-accent-bl {
-  bottom: 5px;
-  left: 5px;
+  bottom: 4px;
+  left: 4px;
   border-bottom: 1.5px solid #FFD700;
   border-left: 1.5px solid #FFD700;
   border-bottom-left-radius: 3px;
 }
 
 .corner-accent-br {
-  bottom: 5px;
-  right: 5px;
+  bottom: 4px;
+  right: 4px;
   border-bottom: 1.5px solid #FFD700;
   border-right: 1.5px solid #FFD700;
   border-bottom-right-radius: 3px;
