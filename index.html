@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificado Synderiel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="html2canvas.min.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="interface-container">
+      <h2>Panel de Control</h2>
+      <div class="input-group">
+        <label>Nombre del Alumno:</label>
+        <input type="text" id="input-name" placeholder="Escribe el nombre aquí" oninput="updateCertificate()" />
+      </div>
+      <div class="input-group">
+        <label>Documento de Identidad:</label>
+        <input type="text" id="input-id" placeholder="Escribe el número aquí" oninput="updateCertificate()" />
+      </div>
+      <button id="download-btn" onclick="generatePDF()">DESCARGAR PDF</button>
+    </div>
+
+    <div id="certificate-container" class="certificate-frame">
+      <div class="border-ornament corner-accent-tl"></div>
+      <div class="border-ornament corner-accent-tr"></div>
+      <div class="border-ornament corner-accent-bl"></div>
+      <div class="border-ornament corner-accent-br"></div>
+
+      <div class="border-diamond diamond-tl">◇</div>
+      <div class="border-diamond diamond-tr">◇</div>
+      <div class="border-diamond diamond-bl">◇</div>
+      <div class="border-diamond diamond-br">◇</div>
+
+      <div id="stars-container"></div>
+
+      <h1 class="gold-text title-main">CENTRO ESPIRITUAL SYNDERIEL</h1>
+      <h3 class="gold-text subtitle">Desarrollo Humano y Programación Neurolingüística PNL</h3>
+
+      <p class="body-text text-certifica">CERTIFICA A: <span id="cert-name" class="blank-space">_______________________</span></p>
+      <p class="body-text">Identificado/a con documento N°: <span id="cert-id" class="blank-space">_______________________</span></p>
+
+      <p class="body-text space-up">Haber cursado y aprobado satisfactoriamente el:</p>
+      <h2 class="gold-text course-title">CURSO DE PROGRAMACIÓN NEUROLINGÜÍSTICA - PNL</h2>
+      <p class="body-text">Cumpliendo con los requisitos académicos y prácticos exigidos por esta institución.</p>
+
+      <p class="body-text space-up">Dado en Santiago de Cali, a los 5 días del mes de Julio de 2026</p>
+      <p class="gold-text cursive-slogan">"Reprogramar tu mente es transformar tu vida"</p>
+
+      <div class="footer-section">
+        <div class="footer-left">
+          <p class="signature-line gold-text">Synderiel</p>
+          <p class="body-text footer-label">Dictado por</p>
+        </div>
+        <div class="footer-right">
+          <p class="body-text gold-text"><b>NIT: 1061819091-1</b></p>
+          <p class="body-text gold-text font-small">Registrado cámara de comercio Cali-Colombia</p>
+        </div>
+      </div>
+
+      <div class="stamp-container">
+        <img id="stamp-img" src="sello.jpg" alt="Sello" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
