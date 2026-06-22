@@ -1,26 +1,3 @@
-function createStars() {
-  var container = document.getElementById("stars-container");
-  if (!container) return;
-  var count = 60;
-
-  for (var i = 0; i < count; i++) {
-    var star = document.createElement("span");
-    star.className = "star";
-    star.textContent = "★";
-
-    var top = Math.random() * 98 + 1;
-    var left = Math.random() * 98 + 1;
-    var size = Math.floor(Math.random() * 7) + 5;
-    var opacity = (Math.random() * 0.35) + 0.2;
-
-    star.style.cssText =
-      "top:" + top + "%;left:" + left + "%;font-size:" + size + "px;opacity:" + opacity + ";" +
-      "transform:rotate(" + (Math.random() * 360) + "deg);";
-
-    container.appendChild(star);
-  }
-}
-
 function removeStampBackground() {
   var img = document.getElementById("stamp-img");
   if (!img) return;
@@ -80,7 +57,7 @@ function generatePDF() {
     backgroundColor: null
   }).then(function (canvas) {
     var imgData = canvas.toDataURL("image/jpeg", 0.95);
-    var pdf = new jspdf.jsPDF("portrait", "pt", "a4");
+    var pdf = new jspdf.jsPDF("landscape", "pt", "a4");
     var w = pdf.internal.pageSize.getWidth();
     var h = pdf.internal.pageSize.getHeight();
     pdf.addImage(imgData, "JPEG", 0, 0, w, h);
@@ -91,6 +68,5 @@ function generatePDF() {
 }
 
 window.addEventListener("DOMContentLoaded", function () {
-  createStars();
   removeStampBackground();
 });
