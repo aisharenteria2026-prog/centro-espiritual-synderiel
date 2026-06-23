@@ -3,8 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certificado Synderiel</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="google-site-verification" content="FnuyDgzu-qrYtyBZNOWAWXLfvUXOg9WaXNY4INB_cNs" />
+    <title>Certificado Synderiel - Centro Espiritual</title>
+    <meta name="description" content="Genera tu certificado digital del Centro Espiritual Synderiel. Curso de Programación Neurolingüística PNL." />
+    <meta name="keywords" content="certificado, synderiel, PNL, centro espiritual" />
+    <meta name="author" content="Centro Espiritual Synderiel" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+    <meta property="og:title" content="Certificado Synderiel - Centro Espiritual" />
+    <meta property="og:description" content="Certificado digital del Curso de Programación Neurolingüística PNL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aisharenteria2026-prog.github.io/centro-espiritual-synderiel/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=14" />
     <script src="html2canvas.min.js"></script>
     <script src="jspdf.umd.min.js"></script>
   </head>
@@ -13,57 +27,60 @@
       <h2>Panel de Control</h2>
       <div class="input-group">
         <label>Nombre del Alumno:</label>
-        <input type="text" id="input-name" placeholder="Escribe el nombre aquí" oninput="updateCertificate()" />
+        <input type="text" id="input-name" placeholder="Escribe el nombre aqu&iacute;" oninput="updateCertificate()" />
       </div>
       <div class="input-group">
         <label>Documento de Identidad:</label>
-        <input type="text" id="input-id" placeholder="Escribe el número aquí" oninput="updateCertificate()" />
+        <input type="text" id="input-id" placeholder="Escribe el n&uacute;mero aqu&iacute;" oninput="updateCertificate()" />
       </div>
       <button id="download-btn" onclick="generatePDF()">DESCARGAR PDF</button>
     </div>
 
     <div id="certificate-container" class="certificate-frame">
-      <div class="border-ornament corner-accent-tl"></div>
-      <div class="border-ornament corner-accent-tr"></div>
-      <div class="border-ornament corner-accent-bl"></div>
-      <div class="border-ornament corner-accent-br"></div>
-
-      <div class="border-diamond diamond-tl">◇</div>
-      <div class="border-diamond diamond-tr">◇</div>
-      <div class="border-diamond diamond-bl">◇</div>
-      <div class="border-diamond diamond-br">◇</div>
 
       <div id="stars-container"></div>
 
-      <h1 class="gold-text title-main">CENTRO ESPIRITUAL SYNDERIEL</h1>
-      <h3 class="gold-text subtitle">Desarrollo Humano y Programación Neurolingüística PNL</h3>
+      <div class="co-tl"><div class="rosette"></div></div>
+      <div class="co-tr"><div class="rosette"></div></div>
+      <div class="co-bl"><div class="rosette"></div></div>
+      <div class="co-br"><div class="rosette"></div></div>
+      <div class="crest-top"></div>
+      <div class="crest-bottom"></div>
+      <div class="frame-inner"></div>
 
-      <p class="body-text text-certifica">CERTIFICA A: <span id="cert-name" class="blank-space">_______________________</span></p>
-      <p class="body-text">Identificado/a con documento N°: <span id="cert-id" class="blank-space">_______________________</span></p>
+      <div class="stamp-top">
+        <img id="stamp-top" src="sello.jpg" alt="Sello" width="110" style="width:110px" />
+      </div>
 
-      <p class="body-text space-up">Haber cursado y aprobado satisfactoriamente el:</p>
-      <h2 class="gold-text course-title">CURSO DE PROGRAMACIÓN NEUROLINGÜÍSTICA - PNL</h2>
-      <p class="body-text">Cumpliendo con los requisitos académicos y prácticos exigidos por esta institución.</p>
+      <h1 class="gold-title">CENTRO ESPIRITUAL<br>SYNDERIEL</h1>
+      <p class="gold-italic subtitle-text">Desarrollo Humano y Programaci&oacute;n Neuroling&uuml;&iacute;stica PNL</p>
 
-      <p class="body-text space-up">Dado en Santiago de Cali, a los 5 días del mes de Julio de 2026</p>
-      <p class="gold-text cursive-slogan">"Reprogramar tu mente es transformar tu vida"</p>
+      <p class="body-dark">CERTIFICA A: <span class="cursive-name" id="cert-name"></span></p>
+      <p class="body-dark">Identificado/a con documento N&deg;: <span class="cursive-name" id="cert-id"></span></p>
+
+      <p class="body-dark">Haber cursado y aprobado satisfactoriamente el:</p>
+      <h2 class="gold-title course-text">CURSO DE PROGRAMACI&Oacute;N NEUROLING&Uuml;&Iacute;STICA - PNL</h2>
+      <p class="body-dark">Cumpliendo con los requisitos acad&eacute;micos y pr&aacute;cticos exigidos por esta instituci&oacute;n.</p>
+
+      <p class="body-dark date-text">Dado en Santiago de Cali, a los 5 d&iacute;as del mes de Julio de 2026</p>
+      <p class="gold-italic slogan-text">&ldquo;Reprogramar tu mente es transformar tu vida&rdquo;</p>
 
       <div class="footer-section">
         <div class="footer-left">
-          <p class="signature-line gold-text">Synderiel</p>
-          <p class="body-text footer-label">Dictado por</p>
+          <p class="signature-name">Synderiel</p>
+          <p class="label-dark">Dictado por</p>
+        </div>
+        <div class="stamp-footer">
+          <img id="stamp-footer" src="sello-inferior.jpg" alt="Sello" width="100" style="width:100px" />
         </div>
         <div class="footer-right">
-          <p class="body-text gold-text"><b>NIT: 1061819091-1</b></p>
-          <p class="body-text gold-text font-small">Registrado cámara de comercio Cali-Colombia</p>
+          <p class="nit-footer">NIT: 1061819091-1</p>
+          <p class="label-dark">Registrado c&aacute;mara de comercio Cali-Colombia</p>
         </div>
       </div>
 
-      <div class="stamp-container">
-        <img id="stamp-img" src="sello.jpg" alt="Sello" />
-      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>

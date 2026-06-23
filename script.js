@@ -1,28 +1,32 @@
 function createStars() {
   var container = document.getElementById("stars-container");
   if (!container) return;
-  var count = 60;
+  var count = 80;
+  var colors = ["#ffffff", "#e8f4ff", "#d0eaff", "#b8dfff", "#cce5ff"];
 
   for (var i = 0; i < count; i++) {
     var star = document.createElement("span");
     star.className = "star";
-    star.textContent = "★";
+    star.textContent = i < 60 ? "★" : "✦";
 
-    var top = Math.random() * 98 + 1;
-    var left = Math.random() * 98 + 1;
-    var size = Math.floor(Math.random() * 7) + 5;
-    var opacity = (Math.random() * 0.35) + 0.2;
+    var top = Math.random() * 96 + 2;
+    var left = Math.random() * 96 + 2;
+    var size = Math.floor(Math.random() * 7) + 3;
+    var color = colors[Math.floor(Math.random() * colors.length)];
+    var opacity = (Math.random() * 0.4) + 0.2;
+    var glow = (Math.random() * 8) + 3;
 
     star.style.cssText =
       "top:" + top + "%;left:" + left + "%;font-size:" + size + "px;opacity:" + opacity + ";" +
+      "color:" + color + ";text-shadow:0 0 " + glow + "px " + color + ";" +
       "transform:rotate(" + (Math.random() * 360) + "deg);";
 
     container.appendChild(star);
   }
 }
 
-function removeStampBackground() {
-  var img = document.getElementById("stamp-img");
+function removeStampBackground(imgId) {
+  var img = document.getElementById(imgId);
   if (!img) return;
 
   function process() {
@@ -60,12 +64,8 @@ function updateCertificate() {
   var nameVal = document.getElementById("input-name").value;
   var idVal = document.getElementById("input-id").value;
 
-  document.getElementById("cert-name").innerText = nameVal
-    ? nameVal
-    : "_______________________";
-  document.getElementById("cert-id").innerText = idVal
-    ? idVal
-    : "_______________________";
+  document.getElementById("cert-name").innerText = nameVal || "";
+  document.getElementById("cert-id").innerText = idVal || "";
 }
 
 function generatePDF() {
@@ -80,7 +80,7 @@ function generatePDF() {
     backgroundColor: null
   }).then(function (canvas) {
     var imgData = canvas.toDataURL("image/jpeg", 0.95);
-    var pdf = new jspdf.jsPDF("portrait", "pt", "a4");
+    var pdf = new jspdf.jsPDF("landscape", "pt", "a4");
     var w = pdf.internal.pageSize.getWidth();
     var h = pdf.internal.pageSize.getHeight();
     pdf.addImage(imgData, "JPEG", 0, 0, w, h);
@@ -92,5 +92,6 @@ function generatePDF() {
 
 window.addEventListener("DOMContentLoaded", function () {
   createStars();
-  removeStampBackground();
+  removeStampBackground("stamp-top");
+  removeStampBackground("stamp-footer");
 });
