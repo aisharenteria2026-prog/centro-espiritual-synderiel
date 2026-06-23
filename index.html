@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=19" />
+    <link rel="stylesheet" href="style.css?v=20" />
     <script src="html2canvas.min.js"></script>
     <script src="jspdf.umd.min.js"></script>
   </head>
@@ -40,18 +40,44 @@
 
       <div id="stars-container"></div>
 
-      <div class="corner-tl"></div>
-      <div class="corner-tr"></div>
-      <div class="corner-bl"></div>
-      <div class="corner-br"></div>
-      <div class="scroll-tl"></div>
-      <div class="scroll-tr"></div>
-      <div class="scroll-bl"></div>
-      <div class="scroll-br"></div>
-      <div class="diamond-top"></div>
-      <div class="diamond-bot"></div>
-      <div class="frame-b2"></div>
-      <div class="frame-dash"></div>
+      <div class="frame-top">
+        <div class="ft-bar ft-bar1"></div>
+        <div class="ft-line ft-line1"></div>
+        <div class="ft-circles">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="ft-diamonds">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="ft-line ft-line2"></div>
+        <div class="ft-bar ft-bar2"></div>
+        <div class="ft-medallion tl"></div>
+        <div class="ft-medallion tr"></div>
+        <div class="ft-center"></div>
+        <div class="ft-corner tl"></div>
+        <div class="ft-corner tr"></div>
+      </div>
+      <div class="frame-bot">
+        <div class="fb-bar fb-bar1"></div>
+        <div class="fb-line fb-line1"></div>
+        <div class="fb-circles">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fb-diamonds">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fb-line fb-line2"></div>
+        <div class="fb-bar fb-bar2"></div>
+        <div class="fb-medallion bl"></div>
+        <div class="fb-medallion br"></div>
+        <div class="fb-center"></div>
+        <div class="fb-corner bl"></div>
+        <div class="fb-corner br"></div>
+      </div>
 
       <div class="stamp-top">
         <img id="stamp-top" src="sello.jpg" alt="Sello" width="110" style="width:110px" />
