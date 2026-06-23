@@ -61,93 +61,164 @@ body {
   font-family: "Playfair Display", serif;
 
   border: 2px solid #DAA520;
-  box-shadow: 0 0 0 8px #121212, 0 0 0 11px #DAA520, 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 0 6px #0a1628,
+    0 0 0 10px #DAA520,
+    0 0 0 22px #0a1628,
+    0 0 0 26px #DAA520,
+    0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Wave corners — scallop ripples (TL and BR only) ====== */
+/* ====== Ornate corner lockets (all 4 corners) ====== */
 
-.wave-corner {
+.corner-locket {
   position: absolute;
   z-index: 5;
   pointer-events: none;
 }
-.wave-corner.tl { top: 0; left: 0; }
-.wave-corner.br { bottom: 0; right: 0; }
+.corner-locket.tl { top: 5px; left: 5px; }
+.corner-locket.tr { top: 5px; right: 5px; }
+.corner-locket.bl { bottom: 5px; left: 5px; }
+.corner-locket.br { bottom: 5px; right: 5px; }
 
-/* ---- scallop along an edge ---- */
-
-.wave-corner .snap {
+/* Diamond at the corner */
+.corner-locket .diamond {
   position: absolute;
+  width: 12px;
+  height: 12px;
   background: #DAA520;
+  transform: rotate(45deg);
+  z-index: 6;
 }
+.corner-locket.tl .diamond { top: -6px; left: -6px; }
+.corner-locket.tr .diamond { top: -6px; right: -6px; left: auto; }
+.corner-locket.bl .diamond { bottom: -6px; left: -6px; top: auto; }
+.corner-locket.br .diamond { bottom: -6px; right: -6px; top: auto; left: auto; }
 
-/* ====== TL: row of scallops along top edge going right ====== */
-
-.wave-corner.tl .s0  { top: 0; left: 3px;  width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .s1  { top: 0; left: 12px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .s2  { top: 4px; left: 22px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .s3  { top: 0; left: 32px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .s4  { top: 4px; left: 42px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .s5  { top: 0; left: 52px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .s6  { top: 4px; left: 62px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .s7  { top: 0; left: 72px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .s8  { top: 4px; left: 82px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .s9  { top: 0; left: 92px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .s10 { top: 4px; left: 102px; width: 3px; height: 3px; border-radius: 50%; }
-
-/* ====== TL: row of scallops along left edge going down ====== */
-
-.wave-corner.tl .d0  { top: 3px;  left: 0; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .d1  { top: 12px; left: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .d2  { top: 22px; left: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .d3  { top: 32px; left: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .d4  { top: 42px; left: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .d5  { top: 52px; left: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .d6  { top: 62px; left: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .d7  { top: 72px; left: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .d8  { top: 82px; left: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.tl .d9  { top: 92px; left: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.tl .d10 { top: 102px; left: 4px; width: 3px; height: 3px; border-radius: 50%; }
-
-/* ====== BR: scallops along bottom edge going left ====== */
-
-.wave-corner.br .s0  { bottom: 0; right: 3px;  width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .s1  { bottom: 0; right: 12px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .s2  { bottom: 4px; right: 22px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .s3  { bottom: 0; right: 32px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .s4  { bottom: 4px; right: 42px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .s5  { bottom: 0; right: 52px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .s6  { bottom: 4px; right: 62px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .s7  { bottom: 0; right: 72px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .s8  { bottom: 4px; right: 82px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .s9  { bottom: 0; right: 92px; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .s10 { bottom: 4px; right: 102px; width: 3px; height: 3px; border-radius: 50%; }
-
-/* ====== BR: scallops along right edge going up ====== */
-
-.wave-corner.br .d0  { bottom: 3px;  right: 0; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .d1  { bottom: 12px; right: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .d2  { bottom: 22px; right: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .d3  { bottom: 32px; right: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .d4  { bottom: 42px; right: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .d5  { bottom: 52px; right: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .d6  { bottom: 62px; right: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .d7  { bottom: 72px; right: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .d8  { bottom: 82px; right: 4px; width: 3px; height: 3px; border-radius: 50%; }
-.wave-corner.br .d9  { bottom: 92px; right: 0; width: 4px; height: 4px; border-radius: 50%; }
-.wave-corner.br .d10 { bottom: 102px; right: 4px; width: 3px; height: 3px; border-radius: 50%; }
-
-/* ====== Corner anchor ====== */
-
-.wave-corner .anchor {
+/* Arm along the horizontal edge */
+.corner-locket .arm-h {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  height: 3px;
+  background: #DAA520;
+  width: 40px;
+}
+.corner-locket.tl .arm-h { top: 1px; left: 8px; }
+.corner-locket.tr .arm-h { top: 1px; right: 8px; left: auto; }
+.corner-locket.bl .arm-h { bottom: 1px; left: 8px; top: auto; }
+.corner-locket.br .arm-h { bottom: 1px; right: 8px; top: auto; left: auto; }
+
+/* Arm along the vertical edge */
+.corner-locket .arm-v {
+  position: absolute;
+  width: 3px;
+  background: #DAA520;
+  height: 40px;
+}
+.corner-locket.tl .arm-v { top: 8px; left: 1px; }
+.corner-locket.tr .arm-v { top: 8px; right: 1px; left: auto; }
+.corner-locket.bl .arm-v { bottom: 8px; left: 1px; top: auto; }
+.corner-locket.br .arm-v { bottom: 8px; right: 1px; top: auto; left: auto; }
+
+/* Ball at the end of each arm */
+.corner-locket .ball {
+  position: absolute;
+  width: 7px;
+  height: 7px;
   background: #DAA520;
   border-radius: 50%;
+  z-index: 6;
 }
-.wave-corner.tl .anchor { top: -1px; left: -1px; }
-.wave-corner.br .anchor { bottom: -1px; right: -1px; top: auto; left: auto; }
+.corner-locket.tl .ball-h { top: -1px; left: 46px; }
+.corner-locket.tr .ball-h { top: -1px; right: 46px; left: auto; }
+.corner-locket.bl .ball-h { bottom: -1px; left: 46px; top: auto; }
+.corner-locket.br .ball-h { bottom: -1px; right: 46px; top: auto; left: auto; }
+
+.corner-locket.tl .ball-v { top: 46px; left: -1px; }
+.corner-locket.tr .ball-v { top: 46px; right: -1px; left: auto; }
+.corner-locket.bl .ball-v { bottom: 46px; left: -1px; top: auto; }
+.corner-locket.br .ball-v { bottom: 46px; right: -1px; top: auto; left: auto; }
+
+/* Inner curved arc connecting the two arms */
+.corner-locket .arc {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid #DAA520;
+  z-index: 5;
+}
+.corner-locket.tl .arc { top: 10px; left: 10px; border-radius: 0 0 24px 0; border-top: none; border-left: none; }
+.corner-locket.tr .arc { top: 10px; right: 10px; left: auto; border-radius: 0 0 0 24px; border-top: none; border-right: none; }
+.corner-locket.bl .arc { bottom: 10px; left: 10px; top: auto; border-radius: 24px 0 0 0; border-bottom: none; border-left: none; }
+.corner-locket.br .arc { bottom: 10px; right: 10px; top: auto; left: auto; border-radius: 0 24px 0 0; border-bottom: none; border-right: none; }
+
+/* Outer curved arc */
+.corner-locket .arc2 {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid #DAA520;
+  z-index: 4;
+}
+.corner-locket.tl .arc2 { top: 6px; left: 6px; border-radius: 0 0 44px 0; border-top: none; border-left: none; }
+.corner-locket.tr .arc2 { top: 6px; right: 6px; left: auto; border-radius: 0 0 0 44px; border-top: none; border-right: none; }
+.corner-locket.bl .arc2 { bottom: 6px; left: 6px; top: auto; border-radius: 44px 0 0 0; border-bottom: none; border-left: none; }
+.corner-locket.br .arc2 { bottom: 6px; right: 6px; top: auto; left: auto; border-radius: 0 44px 0 0; border-bottom: none; border-right: none; }
+
+/* ====== Top and bottom crests ====== */
+
+.frame-crest {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Outer arch */
+.frame-crest .arch {
+  width: 70px;
+  height: 28px;
+  border: 2px solid #DAA520;
+  border-bottom: none;
+  border-radius: 35px 35px 0 0;
+  position: absolute;
+}
+.frame-crest.top .arch { top: 0; }
+.frame-crest.bot .arch { bottom: 0; transform: scaleY(-1); }
+
+/* Inner arch */
+.frame-crest .arch-in {
+  width: 48px;
+  height: 18px;
+  border: 1.5px solid #DAA520;
+  border-bottom: none;
+  border-radius: 24px 24px 0 0;
+  position: absolute;
+}
+.frame-crest.top .arch-in { top: 7px; left: 11px; }
+.frame-crest.bot .arch-in { bottom: 7px; left: 11px; transform: scaleY(-1); }
+
+/* Diamond inside the crest */
+.frame-crest .diamond {
+  width: 8px;
+  height: 8px;
+  background: #DAA520;
+  transform: rotate(45deg);
+  position: absolute;
+}
+.frame-crest.top .diamond { top: 12px; left: 50%; margin-left: -4px; }
+.frame-crest.bot .diamond { bottom: 12px; left: 50%; margin-left: -4px; }
+
+/* Ball on top of crest */
+.frame-crest .ball {
+  width: 7px;
+  height: 7px;
+  background: #DAA520;
+  border-radius: 50%;
+  position: absolute;
+}
+.frame-crest.top .ball { top: -4px; left: 50%; margin-left: -3.5px; }
+.frame-crest.bot .ball { bottom: -4px; left: 50%; margin-left: -3.5px; }
 
 /* ====== Plain corner accent for TR and BL ====== */
 
