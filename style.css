@@ -60,72 +60,50 @@ body {
 
   font-family: "Playfair Display", serif;
 
-  border: 2px solid #DAA520;
-  box-shadow:
-    0 0 0 20px #0a1628,
-    0 0 0 23px #DAA520,
-    0 0 0 36px #0a1628,
-    0 0 0 40px #DAA520,
-    0 0 50px rgba(0, 0, 0, 0.4);
+  border: 3px solid #DAA520;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Crests (top and bottom center) ====== */
+/* ====== Inner frame ====== */
 
-.crest {
+.inner-frame {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 27px;
+  left: 27px;
+  right: 27px;
+  bottom: 27px;
+  border: 1.5px solid #DAA520;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ====== SVG scrollwork corners ====== */
+
+.cscroll {
+  position: absolute;
   z-index: 5;
   pointer-events: none;
 }
-.crest.top { top: 30px; }
-.crest.bot { bottom: 30px; }
+.cscroll.tl { top: -3px; left: -3px; }
+.cscroll.tr { top: -3px; right: -3px; transform: scaleX(-1); }
+.cscroll.bl { bottom: -3px; left: -3px; transform: scaleY(-1); }
+.cscroll.br { bottom: -3px; right: -3px; transform: scale(-1); }
 
-.crest .arch {
-  width: 52px;
-  height: 22px;
-  border: 2px solid #DAA520;
-  border-bottom: none;
-  border-radius: 26px 26px 0 0;
+/* ====== Top and bottom finials ====== */
+
+.finial {
   position: absolute;
   left: 50%;
-  margin-left: -26px;
-}
-.crest.bot .arch {
-  transform: scaleY(-1);
-}
-
-.crest .arch-in {
-  width: 34px;
-  height: 13px;
-  border: 1.5px solid #DAA520;
-  border-bottom: none;
-  border-radius: 17px 17px 0 0;
-  position: absolute;
-  left: 50%;
-  margin-left: -17px;
-  top: 6px;
-}
-.crest.bot .arch-in {
-  transform: scaleY(-1);
-  top: auto;
-  bottom: 6px;
-}
-
-.crest .gem {
+  transform: translateX(-50%);
   width: 6px;
   height: 6px;
   background: #DAA520;
-  transform: rotate(45deg);
-  position: absolute;
-  left: 50%;
-  margin-left: -3px;
-  top: 10px;
+  border-radius: 50%;
+  z-index: 5;
+  pointer-events: none;
 }
-.crest.bot .gem {
-  top: auto;
-  bottom: 10px;
-}
+.finial.top { top: 10px; }
+.finial.bot { bottom: 10px; }
 
 /* ====== Stars ====== */
 
