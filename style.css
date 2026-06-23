@@ -64,77 +64,54 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Inner frame layers ====== */
+/* ====== Wave corners (TL and BR only) ====== */
 
-.frame-l1 {
+.wave-corner {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
+  z-index: 5;
+  pointer-events: none;
+}
+.wave-corner.tl { top: 0; left: 0; }
+.wave-corner.br { bottom: 0; right: 0; transform: scale(-1); }
+
+.wave-corner .wa {
+  position: absolute;
   border: 2px solid #DAA520;
-  z-index: 4;
-  pointer-events: none;
-}
-
-.frame-l2 {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  right: 24px;
-  bottom: 24px;
-  border: 1.5px solid #DAA520;
-  z-index: 4;
-  pointer-events: none;
-}
-
-/* ====== Layer 1 corner squares ====== */
-
-.l1-corner {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #DAA520;
-  z-index: 5;
-  pointer-events: none;
-}
-.l1-corner.tl { top: 10px; left: 10px; }
-.l1-corner.tr { top: 10px; right: 10px; }
-.l1-corner.bl { bottom: 10px; left: 10px; }
-.l1-corner.br { bottom: 10px; right: 10px; }
-
-/* ====== Layer 2 corner diamonds ====== */
-
-.l2-corner {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1.5px solid #DAA520;
-  transform: rotate(45deg);
-  z-index: 5;
-  pointer-events: none;
-}
-.l2-corner.tl { top: 22px; left: 22px; }
-.l2-corner.tr { top: 22px; right: 22px; }
-.l2-corner.bl { bottom: 22px; left: 22px; }
-.l2-corner.br { bottom: 22px; right: 22px; }
-
-/* ====== Top and bottom crests ====== */
-
-.frame-crest {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 24px;
-  z-index: 5;
-  pointer-events: none;
-  border: 2.5px solid #DAA520;
   border-bottom: none;
-  border-radius: 25px 25px 0 0;
+  border-right: none;
+  top: 0;
+  left: 0;
 }
-.frame-crest.top { top: 4px; }
-.frame-crest.bot { bottom: 4px; transform: translateX(-50%) scaleY(-1); }
+.wave-corner .wa1 { width: 22px; height: 22px; border-radius: 22px 0 0 0; border-width: 1.5px; }
+.wave-corner .wa2 { width: 44px; height: 44px; border-radius: 44px 0 0 0; border-width: 2.5px; }
+.wave-corner .wa3 { width: 66px; height: 66px; border-radius: 66px 0 0 0; border-width: 1.5px; }
+.wave-corner .wa4 { width: 88px; height: 88px; border-radius: 88px 0 0 0; border-width: 2.5px; }
+.wave-corner .wa5 { width: 110px; height: 110px; border-radius: 110px 0 0 0; border-width: 1.5px; }
+
+/* Center dot where the waves originate */
+.wave-corner .wdot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #DAA520;
+  border-radius: 50%;
+  top: -2px;
+  left: -2px;
+}
+
+/* ====== Plain corner accent for TR and BL ====== */
+
+.corner-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #DAA520;
+  border-radius: 50%;
+  z-index: 5;
+  pointer-events: none;
+}
+.corner-dot.tr { top: 4px; right: 4px; }
+.corner-dot.bl { bottom: 4px; left: 4px; }
 
 /* ====== Stars ====== */
 
