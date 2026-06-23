@@ -84,7 +84,7 @@ function generatePDF() {
     backgroundColor: null
   }).then(function (canvas) {
     var imgData = canvas.toDataURL("image/jpeg", 0.95);
-    var pdf = new jspdf.jsPDF("portrait", "pt", "a4");
+    var pdf = new jspdf.jsPDF("landscape", "pt", "a4");
     var w = pdf.internal.pageSize.getWidth();
     var h = pdf.internal.pageSize.getHeight();
     pdf.addImage(imgData, "JPEG", 0, 0, w, h);
