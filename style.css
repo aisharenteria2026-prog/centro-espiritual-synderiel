@@ -52,7 +52,7 @@ body {
   width: 750px;
   height: 1060px;
   box-sizing: border-box;
-  padding: 55px 65px 35px;
+  padding: 55px 65px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -69,7 +69,7 @@ body {
 
   font-family: "Playfair Display", serif;
 
-  border: 1px solid rgba(255, 215, 0, 0.35);
+  border: 1px solid rgba(255, 215, 0, 0.55);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -80,7 +80,7 @@ body {
   left: 16px;
   right: 16px;
   bottom: 16px;
-  border: 1px solid rgba(255, 215, 0, 0.25);
+  border: 1px solid rgba(255, 215, 0, 0.4);
   pointer-events: none;
   z-index: 3;
   border-radius: 3px;
@@ -97,64 +97,64 @@ body {
 .tl-outer {
   top: 6px; left: 6px;
   width: 40px; height: 40px;
-  border-top: 1.5px solid rgba(255, 215, 0, 0.5);
-  border-left: 1.5px solid rgba(255, 215, 0, 0.5);
+  border-top: 1.5px solid rgba(255, 215, 0, 0.75);
+  border-left: 1.5px solid rgba(255, 215, 0, 0.75);
   border-top-left-radius: 18px;
 }
 
 .tr-outer {
   top: 6px; right: 6px;
   width: 40px; height: 40px;
-  border-top: 1.5px solid rgba(255, 215, 0, 0.5);
-  border-right: 1.5px solid rgba(255, 215, 0, 0.5);
+  border-top: 1.5px solid rgba(255, 215, 0, 0.75);
+  border-right: 1.5px solid rgba(255, 215, 0, 0.75);
   border-top-right-radius: 18px;
 }
 
 .bl-outer {
   bottom: 6px; left: 6px;
   width: 40px; height: 40px;
-  border-bottom: 1.5px solid rgba(255, 215, 0, 0.5);
-  border-left: 1.5px solid rgba(255, 215, 0, 0.5);
+  border-bottom: 1.5px solid rgba(255, 215, 0, 0.75);
+  border-left: 1.5px solid rgba(255, 215, 0, 0.75);
   border-bottom-left-radius: 18px;
 }
 
 .br-outer {
   bottom: 6px; right: 6px;
   width: 40px; height: 40px;
-  border-bottom: 1.5px solid rgba(255, 215, 0, 0.5);
-  border-right: 1.5px solid rgba(255, 215, 0, 0.5);
+  border-bottom: 1.5px solid rgba(255, 215, 0, 0.75);
+  border-right: 1.5px solid rgba(255, 215, 0, 0.75);
   border-bottom-right-radius: 18px;
 }
 
 .tl-inner {
   top: 13px; left: 13px;
   width: 26px; height: 26px;
-  border-top: 1px solid rgba(255, 215, 0, 0.4);
-  border-left: 1px solid rgba(255, 215, 0, 0.4);
+  border-top: 1px solid rgba(255, 215, 0, 0.6);
+  border-left: 1px solid rgba(255, 215, 0, 0.6);
   border-top-left-radius: 12px;
 }
 
 .tr-inner {
   top: 13px; right: 13px;
   width: 26px; height: 26px;
-  border-top: 1px solid rgba(255, 215, 0, 0.4);
-  border-right: 1px solid rgba(255, 215, 0, 0.4);
+  border-top: 1px solid rgba(255, 215, 0, 0.6);
+  border-right: 1px solid rgba(255, 215, 0, 0.6);
   border-top-right-radius: 12px;
 }
 
 .bl-inner {
   bottom: 13px; left: 13px;
   width: 26px; height: 26px;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.4);
-  border-left: 1px solid rgba(255, 215, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.6);
+  border-left: 1px solid rgba(255, 215, 0, 0.6);
   border-bottom-left-radius: 12px;
 }
 
 .br-inner {
   bottom: 13px; right: 13px;
   width: 26px; height: 26px;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.4);
-  border-right: 1px solid rgba(255, 215, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.6);
+  border-right: 1px solid rgba(255, 215, 0, 0.6);
   border-bottom-right-radius: 12px;
 }
 
@@ -243,7 +243,7 @@ body {
   text-shadow:
     0 0 6px rgba(255, 215, 0, 0.2),
     0 1px 3px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.7);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.8);
   padding: 0 6px;
   display: inline-block;
   min-width: 130px;
@@ -290,7 +290,7 @@ body {
   font-style: normal;
   font-size: 22px;
   color: #000000;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.7);
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
@@ -312,7 +312,7 @@ body {
   font-style: normal;
   font-size: 16px;
   color: #000000;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.7);
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
