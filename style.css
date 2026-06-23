@@ -278,12 +278,12 @@ body {
 }
 
 .signature-name {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
+  font-family: "Alex Brush", cursive;
+  font-weight: bold;
   font-style: normal;
-  font-size: 18px;
-  color: #0a1628;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+  font-size: 22px;
+  color: #C5A55A;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(197, 165, 90, 0.6);
   padding-bottom: 2px;
   width: 75%;
@@ -299,6 +299,20 @@ body {
   color: #0a1628;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
   margin: 0;
+}
+
+.nit-footer {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #0a1628;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(197, 165, 90, 0.6);
+  padding-bottom: 2px;
+  width: 75%;
+  margin: 0 auto 3px auto;
+  line-height: 1;
 }
 
 .stamp-footer img {
