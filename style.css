@@ -222,10 +222,6 @@ body {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #DAA520;
-  background: linear-gradient(135deg, #F7D875 0%, #E8C44A 30%, #DAA520 55%, #C49A2C 80%, #B8860B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   margin: 0 0 2px 0;
   line-height: 1.2;
@@ -238,10 +234,6 @@ body {
   font-style: italic;
   font-weight: 400;
   color: #DAA520;
-  background: linear-gradient(135deg, #F7D875 0%, #DAA520 50%, #B8860B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 2;
