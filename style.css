@@ -57,42 +57,12 @@ body {
   position: relative;
   overflow: hidden;
 
-  background-color: #0a1628;
-  background:
-    radial-gradient(ellipse 450px 280px at 50% 40%, rgba(220, 240, 255, 0.18), transparent),
-    radial-gradient(ellipse 300px 220px at 20% 65%, rgba(200, 230, 255, 0.1), transparent),
-    radial-gradient(ellipse 300px 220px at 80% 65%, rgba(200, 230, 255, 0.1), transparent),
-    radial-gradient(ellipse 400px 180px at 50% 90%, rgba(180, 220, 255, 0.08), transparent),
-    radial-gradient(ellipse at 50% 42%, #c8e6ff 0%, #a8d8ff 18%, #6ba3d9 40%, #2a5a8a 65%, #0a1628 100%);
+  background: radial-gradient(ellipse at 50% 42%, #c8e6ff 0%, #a8d8ff 20%, #6ba3d9 45%, #2a5a8a 70%, #0a1628 100%);
 
   font-family: "Playfair Display", serif;
 
   border: 1px solid #C5A55A;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-}
-
-.certificate-frame::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  border: 2px solid #C5A55A;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.certificate-frame::after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  border: 1px solid rgba(197, 165, 90, 0.25);
-  pointer-events: none;
-  z-index: 3;
 }
 
 /* ====== Ornate Corners ====== */
