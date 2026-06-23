@@ -141,11 +141,11 @@ body {
   font-family: "Allura", cursive;
   font-size: 30px;
   color: #DAA520;
-  padding: 0 6px;
+  padding: 0 6px 2px;
   display: inline-block;
   min-width: 130px;
   line-height: 1;
-  border-bottom: 1.5px solid #000;
+  border-bottom: 2px solid #000 !important;
 }
 
 .course-text {
