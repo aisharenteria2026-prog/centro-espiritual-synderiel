@@ -49,114 +49,69 @@ body {
 /* ====== Certificate ====== */
 
 .certificate-frame {
-  width: 750px;
-  height: 1060px;
+  width: 1060px;
+  height: 750px;
   box-sizing: border-box;
-  padding: 55px 65px 20px;
+  padding: 40px 70px 25px;
   text-align: center;
   position: relative;
   overflow: hidden;
 
   background-color: #0a1628;
   background:
-    radial-gradient(ellipse 350px 250px at 30% 25%, rgba(200, 230, 255, 0.12), transparent),
-    radial-gradient(ellipse 250px 350px at 70% 20%, rgba(180, 220, 255, 0.1), transparent),
-    radial-gradient(ellipse 400px 300px at 50% 40%, rgba(220, 240, 255, 0.18), transparent),
-    radial-gradient(ellipse 300px 250px at 15% 70%, rgba(190, 225, 255, 0.1), transparent),
-    radial-gradient(ellipse 300px 200px at 85% 60%, rgba(200, 230, 255, 0.12), transparent),
-    radial-gradient(ellipse 350px 180px at 50% 85%, rgba(180, 220, 255, 0.08), transparent),
+    radial-gradient(ellipse 450px 280px at 50% 40%, rgba(220, 240, 255, 0.18), transparent),
+    radial-gradient(ellipse 300px 220px at 20% 65%, rgba(200, 230, 255, 0.1), transparent),
+    radial-gradient(ellipse 300px 220px at 80% 65%, rgba(200, 230, 255, 0.1), transparent),
+    radial-gradient(ellipse 400px 180px at 50% 90%, rgba(180, 220, 255, 0.08), transparent),
     radial-gradient(ellipse at 50% 42%, #c8e6ff 0%, #a8d8ff 18%, #6ba3d9 40%, #2a5a8a 65%, #0a1628 100%);
 
   font-family: "Playfair Display", serif;
 
   border: 1px solid #C5A55A;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
 .certificate-frame::before {
   content: '';
   position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  border: 1px solid #C5A55A;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid #C5A55A;
   pointer-events: none;
   z-index: 3;
-  border-radius: 3px;
 }
 
-/* ====== Baroque Corners ====== */
-
-.baroque-corner {
+.certificate-frame::after {
+  content: '';
   position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid rgba(197, 165, 90, 0.35);
   pointer-events: none;
-  z-index: 4;
+  z-index: 3;
 }
 
-.tl-outer {
-  top: 6px; left: 6px;
-  width: 40px; height: 40px;
-  border-top: 1.5px solid #C5A55A;
-  border-left: 1.5px solid #C5A55A;
-  border-top-left-radius: 18px;
+/* ====== Diamond Corners ====== */
+
+.corner-diamond {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #C5A55A;
+  transform: rotate(45deg);
+  background: rgba(10, 22, 40, 0.95);
+  z-index: 5;
+  pointer-events: none;
 }
 
-.tr-outer {
-  top: 6px; right: 6px;
-  width: 40px; height: 40px;
-  border-top: 1.5px solid #C5A55A;
-  border-right: 1.5px solid #C5A55A;
-  border-top-right-radius: 18px;
-}
-
-.bl-outer {
-  bottom: 6px; left: 6px;
-  width: 40px; height: 40px;
-  border-bottom: 1.5px solid #C5A55A;
-  border-left: 1.5px solid #C5A55A;
-  border-bottom-left-radius: 18px;
-}
-
-.br-outer {
-  bottom: 6px; right: 6px;
-  width: 40px; height: 40px;
-  border-bottom: 1.5px solid #C5A55A;
-  border-right: 1.5px solid #C5A55A;
-  border-bottom-right-radius: 18px;
-}
-
-.tl-inner {
-  top: 13px; left: 13px;
-  width: 26px; height: 26px;
-  border-top: 1px solid #C5A55A;
-  border-left: 1px solid #C5A55A;
-  border-top-left-radius: 12px;
-}
-
-.tr-inner {
-  top: 13px; right: 13px;
-  width: 26px; height: 26px;
-  border-top: 1px solid #C5A55A;
-  border-right: 1px solid #C5A55A;
-  border-top-right-radius: 12px;
-}
-
-.bl-inner {
-  bottom: 13px; left: 13px;
-  width: 26px; height: 26px;
-  border-bottom: 1px solid #C5A55A;
-  border-left: 1px solid #C5A55A;
-  border-bottom-left-radius: 12px;
-}
-
-.br-inner {
-  bottom: 13px; right: 13px;
-  width: 26px; height: 26px;
-  border-bottom: 1px solid #C5A55A;
-  border-right: 1px solid #C5A55A;
-  border-bottom-right-radius: 12px;
-}
+.cd-tl { top: 1px; left: 1px; }
+.cd-tr { top: 1px; right: 1px; }
+.cd-bl { bottom: 1px; left: 1px; }
+.cd-br { bottom: 1px; right: 1px; }
 
 /* ====== Stars ====== */
 
@@ -193,14 +148,15 @@ body {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #C5A55A;
-  text-shadow:
-    0 0 8px rgba(197, 165, 90, 0.3),
-    0 0 20px rgba(197, 165, 90, 0.1),
-    0 2px 4px rgba(0, 0, 0, 0.5);
+  color: #DAA520;
+  background: linear-gradient(135deg, #F7D875 0%, #E8C44A 30%, #DAA520 55%, #C49A2C 80%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   margin: 0 0 2px 0;
   line-height: 1.2;
   position: relative;
@@ -211,17 +167,19 @@ body {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
-  color: #C5A55A;
-  text-shadow:
-    0 0 6px rgba(197, 165, 90, 0.25),
-    0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #DAA520;
+  background: linear-gradient(135deg, #F7D875 0%, #DAA520 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 2;
 }
 
 .subtitle-text {
-  font-size: 17px;
-  margin: 0 0 22px 0;
+  font-size: 16px;
+  margin: 0 0 16px 0;
 }
 
 .body-dark {
@@ -231,7 +189,7 @@ body {
   font-size: 16px;
   color: #0a1628;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
-  margin: 5px 0;
+  margin: 4px 0;
   position: relative;
   z-index: 2;
 }
@@ -239,10 +197,12 @@ body {
 .cursive-name {
   font-family: "Allura", cursive;
   font-size: 30px;
-  color: #C5A55A;
-  text-shadow:
-    0 0 6px rgba(197, 165, 90, 0.2),
-    0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #DAA520;
+  background: linear-gradient(135deg, #F7D875 0%, #DAA520 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid #C5A55A;
   padding: 0 6px;
   display: inline-block;
@@ -272,7 +232,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 92%;
-  margin: 24px auto 0 auto;
+  margin: 18px auto 0 auto;
   position: relative;
   z-index: 2;
 }
