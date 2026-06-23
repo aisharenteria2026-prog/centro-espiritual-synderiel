@@ -61,173 +61,77 @@ body {
   font-family: "Playfair Display", serif;
 
   border: 2px solid #DAA520;
-  box-shadow: 0 0 0 6px #0a1628, 0 0 0 10px #DAA520, 0 0 0 22px #0a1628, 0 0 0 26px #DAA520, 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 6px #0a1628, 0 0 0 9px #DAA520, 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Ornate corner lockets (all 4 corners) ====== */
+/* ====== Top and bottom accent bands ====== */
 
-.corner-locket {
+.frame-band {
   position: absolute;
+  left: 40px;
+  right: 40px;
   z-index: 5;
   pointer-events: none;
 }
-.corner-locket.tl { top: 5px; left: 5px; }
-.corner-locket.tr { top: 5px; right: 5px; }
-.corner-locket.bl { bottom: 5px; left: 5px; }
-.corner-locket.br { bottom: 5px; right: 5px; }
+.frame-band.top { top: 12px; }
+.frame-band.bot { bottom: 12px; }
 
-/* Diamond at the corner */
-.corner-locket .diamond {
+.frame-band .line {
+  height: 0;
+  border-top: 1.5px solid #DAA520;
   position: absolute;
-  width: 12px;
-  height: 12px;
-  background: #DAA520;
-  transform: rotate(45deg);
-  z-index: 6;
+  left: 0;
+  right: 0;
 }
-.corner-locket.tl .diamond { top: -6px; left: -6px; }
-.corner-locket.tr .diamond { top: -6px; right: -6px; left: auto; }
-.corner-locket.bl .diamond { bottom: -6px; left: -6px; top: auto; }
-.corner-locket.br .diamond { bottom: -6px; right: -6px; top: auto; left: auto; }
+.frame-band .line1 { top: 0; }
+.frame-band .line2 { top: 12px; }
+.frame-band .line3 { top: 24px; }
+.frame-band .line4 { top: 36px; }
 
-/* Arm along the horizontal edge */
-.corner-locket .arm-h {
-  position: absolute;
-  height: 3px;
-  background: #DAA520;
-  width: 40px;
-}
-.corner-locket.tl .arm-h { top: 1px; left: 8px; }
-.corner-locket.tr .arm-h { top: 1px; right: 8px; left: auto; }
-.corner-locket.bl .arm-h { bottom: 1px; left: 8px; top: auto; }
-.corner-locket.br .arm-h { bottom: 1px; right: 8px; top: auto; left: auto; }
-
-/* Arm along the vertical edge */
-.corner-locket .arm-v {
-  position: absolute;
-  width: 3px;
-  background: #DAA520;
-  height: 40px;
-}
-.corner-locket.tl .arm-v { top: 8px; left: 1px; }
-.corner-locket.tr .arm-v { top: 8px; right: 1px; left: auto; }
-.corner-locket.bl .arm-v { bottom: 8px; left: 1px; top: auto; }
-.corner-locket.br .arm-v { bottom: 8px; right: 1px; top: auto; left: auto; }
-
-/* Ball at the end of each arm */
-.corner-locket .ball {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background: #DAA520;
-  border-radius: 50%;
-  z-index: 6;
-}
-.corner-locket.tl .ball-h { top: -1px; left: 46px; }
-.corner-locket.tr .ball-h { top: -1px; right: 46px; left: auto; }
-.corner-locket.bl .ball-h { bottom: -1px; left: 46px; top: auto; }
-.corner-locket.br .ball-h { bottom: -1px; right: 46px; top: auto; left: auto; }
-
-.corner-locket.tl .ball-v { top: 46px; left: -1px; }
-.corner-locket.tr .ball-v { top: 46px; right: -1px; left: auto; }
-.corner-locket.bl .ball-v { bottom: 46px; left: -1px; top: auto; }
-.corner-locket.br .ball-v { bottom: 46px; right: -1px; top: auto; left: auto; }
-
-/* Inner curved arc connecting the two arms */
-.corner-locket .arc {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 1.5px solid #DAA520;
-  z-index: 5;
-}
-.corner-locket.tl .arc { top: 10px; left: 10px; border-radius: 0 0 24px 0; border-top: none; border-left: none; }
-.corner-locket.tr .arc { top: 10px; right: 10px; left: auto; border-radius: 0 0 0 24px; border-top: none; border-right: none; }
-.corner-locket.bl .arc { bottom: 10px; left: 10px; top: auto; border-radius: 24px 0 0 0; border-bottom: none; border-left: none; }
-.corner-locket.br .arc { bottom: 10px; right: 10px; top: auto; left: auto; border-radius: 0 24px 0 0; border-bottom: none; border-right: none; }
-
-/* Outer curved arc */
-.corner-locket .arc2 {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  border: 1.5px solid #DAA520;
-  z-index: 4;
-}
-.corner-locket.tl .arc2 { top: 6px; left: 6px; border-radius: 0 0 44px 0; border-top: none; border-left: none; }
-.corner-locket.tr .arc2 { top: 6px; right: 6px; left: auto; border-radius: 0 0 0 44px; border-top: none; border-right: none; }
-.corner-locket.bl .arc2 { bottom: 6px; left: 6px; top: auto; border-radius: 44px 0 0 0; border-bottom: none; border-left: none; }
-.corner-locket.br .arc2 { bottom: 6px; right: 6px; top: auto; left: auto; border-radius: 0 44px 0 0; border-bottom: none; border-right: none; }
-
-/* ====== Top and bottom crests ====== */
-
-.frame-crest {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  pointer-events: none;
-}
-
-/* Outer arch */
-.frame-crest .arch {
-  width: 70px;
-  height: 28px;
-  border: 2px solid #DAA520;
-  border-bottom: none;
-  border-radius: 35px 35px 0 0;
-  position: absolute;
-}
-.frame-crest.top .arch { top: 0; }
-.frame-crest.bot .arch { bottom: 0; transform: scaleY(-1); }
-
-/* Inner arch */
-.frame-crest .arch-in {
-  width: 48px;
-  height: 18px;
-  border: 1.5px solid #DAA520;
-  border-bottom: none;
-  border-radius: 24px 24px 0 0;
-  position: absolute;
-}
-.frame-crest.top .arch-in { top: 7px; left: 11px; }
-.frame-crest.bot .arch-in { bottom: 7px; left: 11px; transform: scaleY(-1); }
-
-/* Diamond inside the crest */
-.frame-crest .diamond {
-  width: 8px;
-  height: 8px;
-  background: #DAA520;
-  transform: rotate(45deg);
-  position: absolute;
-}
-.frame-crest.top .diamond { top: 12px; left: 50%; margin-left: -4px; }
-.frame-crest.bot .diamond { bottom: 12px; left: 50%; margin-left: -4px; }
-
-/* Ball on top of crest */
-.frame-crest .ball {
-  width: 7px;
-  height: 7px;
-  background: #DAA520;
-  border-radius: 50%;
-  position: absolute;
-}
-.frame-crest.top .ball { top: -4px; left: 50%; margin-left: -3.5px; }
-.frame-crest.bot .ball { bottom: -4px; left: 50%; margin-left: -3.5px; }
-
-/* ====== Plain corner accent for TR and BL ====== */
-
-.corner-dot {
+/* Small diamond end-caps for the bands */
+.frame-band .cap {
   position: absolute;
   width: 6px;
   height: 6px;
   background: #DAA520;
-  border-radius: 50%;
+  transform: rotate(45deg);
+}
+.frame-band.top .cap { top: 15px; }
+.frame-band.bot .cap { bottom: 15px; top: auto; }
+.frame-band .cap.l { left: -3px; }
+.frame-band .cap.r { right: -3px; left: auto; }
+
+/* ====== Corner diamonds ====== */
+
+.corner-gem {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #DAA520;
+  transform: rotate(45deg);
   z-index: 5;
   pointer-events: none;
 }
-.corner-dot.tr { top: 4px; right: 4px; }
-.corner-dot.bl { bottom: 4px; left: 4px; }
+.corner-gem.tl { top: 6px; left: 6px; }
+.corner-gem.tr { top: 6px; right: 6px; }
+.corner-gem.bl { bottom: 6px; left: 6px; }
+.corner-gem.br { bottom: 6px; right: 6px; }
+
+/* ====== Edge mid-point diamonds ====== */
+
+.edge-gem {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #DAA520;
+  transform: rotate(45deg);
+  z-index: 5;
+  pointer-events: none;
+}
+.edge-gem.t  { top: 6px;    left: 50%;  margin-left: -2.5px; }
+.edge-gem.b  { bottom: 6px; left: 50%;  margin-left: -2.5px; }
+.edge-gem.l  { left: 6px;   top: 50%;   margin-top: -2.5px; }
+.edge-gem.r  { right: 6px;  top: 50%;   margin-top: -2.5px; }
 
 /* ====== Stars ====== */
 
