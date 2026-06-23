@@ -64,12 +64,8 @@ function updateCertificate() {
   var nameVal = document.getElementById("input-name").value;
   var idVal = document.getElementById("input-id").value;
 
-  document.getElementById("cert-name").innerText = nameVal
-    ? nameVal
-    : "_______________________";
-  document.getElementById("cert-id").innerText = idVal
-    ? idVal
-    : "_______________________";
+  document.getElementById("cert-name").innerText = nameVal || "";
+  document.getElementById("cert-id").innerText = idVal || "";
 }
 
 function generatePDF() {
