@@ -64,12 +64,12 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Ornate corner scrollwork ====== */
+/* ====== Ornate corner rosettes ====== */
 
 .corner {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   z-index: 5;
   pointer-events: none;
 }
@@ -78,40 +78,68 @@ body {
 .corner.bl { bottom: -2px; left: -2px; transform: scaleY(-1); }
 .corner.br { bottom: -2px; right: -2px; transform: scale(-1); }
 
-/* Bold L-shaped bracket */
+/* Sweeping curve from corner */
 .corner::before {
   content: '';
   position: absolute;
-  inset: 0;
-  border: 7px solid #DAA520;
-  border-bottom: none;
-  border-right: none;
+  width: 44px;
+  height: 44px;
+  border: 2.5px solid #DAA520;
+  border-radius: 0 0 44px 0;
+  border-top: none;
+  border-left: none;
+  top: 2px;
+  left: 2px;
 }
 
-/* Inner decorative bracket */
+/* Inner sweep */
 .corner::after {
   content: '';
   position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+  width: 26px;
+  height: 26px;
   border: 2px solid #DAA520;
-  border-bottom: none;
-  border-right: none;
-  border-radius: 6px 0 0 0;
+  border-radius: 0 0 26px 0;
+  border-top: none;
+  border-left: none;
+  top: 11px;
+  left: 11px;
 }
 
-/* Small accent at the inner corner */
-.corner-gem {
+/* Rosette medallion at corner center */
+.corner-rose {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 22px;
+  height: 22px;
   border: 2px solid #DAA520;
-  transform: rotate(45deg);
-  bottom: 12px;
-  right: 12px;
-  background: rgba(10,22,40,0.9);
+  border-radius: 50%;
+  top: 13px;
+  left: 13px;
+  background: radial-gradient(circle, rgba(218,165,32,0.25) 0%, transparent 70%);
+}
+
+.corner-rose::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid #DAA520;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.corner-rose::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #DAA520;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ====== Connecting edge lines ====== */
@@ -123,28 +151,28 @@ body {
   pointer-events: none;
 }
 .edge-line.top {
-  top: 8px;
-  left: 68px;
-  right: 68px;
-  height: 2px;
+  top: 6px;
+  left: 48px;
+  right: 48px;
+  height: 1.5px;
 }
 .edge-line.bot {
-  bottom: 8px;
-  left: 68px;
-  right: 68px;
-  height: 2px;
+  bottom: 6px;
+  left: 48px;
+  right: 48px;
+  height: 1.5px;
 }
 .edge-line.left {
-  left: 8px;
-  top: 68px;
-  bottom: 68px;
-  width: 2px;
+  left: 6px;
+  top: 48px;
+  bottom: 48px;
+  width: 1.5px;
 }
 .edge-line.right {
-  right: 8px;
-  top: 68px;
-  bottom: 68px;
-  width: 2px;
+  right: 6px;
+  top: 48px;
+  bottom: 48px;
+  width: 1.5px;
 }
 
 /* ====== Stars ====== */
