@@ -203,11 +203,20 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-  border-bottom: 1.5px solid #000;
   padding: 0 6px;
   display: inline-block;
   min-width: 130px;
   line-height: 1;
+  position: relative;
+}
+.cursive-name::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 6px;
+  right: 6px;
+  height: 1.5px;
+  background: #000;
 }
 
 .course-text {
@@ -250,11 +259,20 @@ body {
   font-style: normal;
   font-size: 22px;
   color: #000000;
-  border-bottom: 1px solid #000000;
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
   line-height: 1;
+  position: relative;
+}
+.signature-name::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #000;
 }
 
 .label-dark {
@@ -272,11 +290,20 @@ body {
   font-style: normal;
   font-size: 16px;
   color: #000000;
-  border-bottom: 1px solid #000000;
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
   line-height: 1;
+  position: relative;
+}
+.nit-footer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #000;
 }
 
 .stamp-footer img {
