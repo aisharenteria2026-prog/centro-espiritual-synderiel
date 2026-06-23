@@ -37,7 +37,7 @@ body {
 #download-btn {
   width: 100%;
   padding: 10px;
-  background: #C5A55A;
+  background: #B8963C;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -61,43 +61,58 @@ body {
 
   font-family: "Playfair Display", serif;
 
-  border: 1px solid #C5A55A;
+  border: 1px solid #B8963C;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
-/* ====== Ornate Corners ====== */
-
-.corner-ornament {
+.certificate-frame::before {
+  content: '';
   position: absolute;
-  width: 30px;
-  height: 30px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid rgba(185, 150, 60, 0.35);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ====== Filigree Corners ====== */
+
+.filigree-corner {
+  position: absolute;
+  width: 52px;
+  height: 52px;
   z-index: 5;
   pointer-events: none;
 }
-.corner-ornament::before {
+.filigree-corner::before {
   content: '';
   position: absolute;
-  inset: 2px;
-  border: 1.5px solid #C5A55A;
-  border-radius: 50%;
-  background: rgba(10, 22, 40, 0.95);
+  top: 1px;
+  left: 1px;
+  width: 40px;
+  height: 40px;
+  border-right: 1px solid #B8963C;
+  border-bottom: 1px solid #B8963C;
+  border-radius: 0 0 32px 0;
 }
-.corner-ornament::after {
+.filigree-corner::after {
   content: '';
   position: absolute;
-  top: 7px;
-  left: 7px;
-  right: 7px;
-  bottom: 7px;
-  border: 1px solid #C5A55A;
-  transform: rotate(45deg);
-  background: rgba(10, 22, 40, 0.95);
+  bottom: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border-right: 1px solid #B8963C;
+  border-bottom: 1px solid #B8963C;
+  border-radius: 0 0 20px 0;
 }
 
-.co-tl { top: -1px; left: -1px; }
-.co-tr { top: -1px; right: -1px; }
-.co-bl { bottom: -1px; left: -1px; }
-.co-br { bottom: -1px; right: -1px; }
+.fc-tl { top: -1px; left: -1px; }
+.fc-tr { top: -1px; right: -1px; transform: rotate(90deg); }
+.fc-bl { bottom: -1px; left: -1px; transform: rotate(-90deg); }
+.fc-br { bottom: -1px; right: -1px; transform: rotate(180deg); }
 
 /* ====== Top / Bottom Crest ====== */
 
@@ -108,7 +123,7 @@ body {
   transform: translateX(-50%);
   width: 56px;
   height: 26px;
-  border: 1.5px solid #C5A55A;
+  border: 1.5px solid #B8963C;
   border-top: none;
   border-radius: 0 0 28px 28px;
   background: rgba(10, 22, 40, 0.95);
@@ -134,7 +149,7 @@ body {
   transform: translateX(-50%);
   width: 56px;
   height: 26px;
-  border: 1.5px solid #C5A55A;
+  border: 1.5px solid #B8963C;
   border-bottom: none;
   border-radius: 28px 28px 0 0;
   background: rgba(10, 22, 40, 0.95);
