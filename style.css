@@ -481,7 +481,9 @@ body {
 }
 
 .slogan-text {
-  font-size: 18px;
+  font-family: "Allura", cursive;
+  font-size: 22px;
+  color: #000;
   margin: 12px 0 6px 0;
 }
 
