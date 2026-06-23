@@ -61,153 +61,18 @@ body {
 
   font-family: "Playfair Display", serif;
 
-  border: 1px solid #C9A84C;
+  border: none;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
-.certificate-frame::before {
-  content: '';
+.frame-overlay {
   position: absolute;
-  top: 7px;
-  left: 7px;
-  right: 7px;
-  bottom: 7px;
-  border: 2px solid #C9A84C;
-  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 3;
-}
-
-.certificate-frame::after {
-  content: '';
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  border: 1px solid #C9A84C;
   pointer-events: none;
-  z-index: 3;
-}
-
-/* ====== Ornate Corners ====== */
-
-.corner-ornament {
-  position: absolute;
-  width: 72px;
-  height: 72px;
-  z-index: 5;
-  pointer-events: none;
-  border-right: 1.5px solid #C9A84C;
-  border-bottom: 1.5px solid #C9A84C;
-  border-radius: 0 0 58px 0;
-}
-.corner-ornament::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid #C9A84C;
-  border-radius: 0 0 38px 0;
-  border-top: none;
-  border-left: none;
-}
-.corner-ornament::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
-  border: 1px solid #C9A84C;
-  border-radius: 50%;
-  background: rgba(10, 22, 40, 0.92);
-  box-shadow:
-    inset 0 0 0 3px rgba(10, 22, 40, 0.95),
-    inset 0 0 0 4px #C9A84C,
-    inset 0 0 0 8px rgba(10, 22, 40, 0.95);
-}
-
-.co-tl { top: -2px; left: -2px; }
-.co-tr { top: -2px; right: -2px; transform: rotate(90deg); }
-.co-bl { bottom: -2px; left: -2px; transform: rotate(-90deg); }
-.co-br { bottom: -2px; right: -2px; transform: rotate(180deg); }
-
-/* ====== Crests ====== */
-
-.crest-top {
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 56px;
-  height: 28px;
-  border: 1.5px solid #C9A84C;
-  border-top: none;
-  border-radius: 0 0 28px 28px;
-  background: rgba(10, 22, 40, 0.92);
-  z-index: 5;
-  pointer-events: none;
-}
-.crest-top::before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: -1px;
-  border: 1px solid #C9A84C;
-  border-top: none;
-  border-radius: 0 0 23px 23px;
-}
-.crest-top::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: -1px;
-  border: 1px solid rgba(201, 168, 76, 0.4);
-  border-top: none;
-  border-radius: 0 0 18px 18px;
-}
-
-.crest-bottom {
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 56px;
-  height: 28px;
-  border: 1.5px solid #C9A84C;
-  border-bottom: none;
-  border-radius: 28px 28px 0 0;
-  background: rgba(10, 22, 40, 0.92);
-  z-index: 5;
-  pointer-events: none;
-}
-.crest-bottom::before {
-  content: '';
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  right: 5px;
-  top: -1px;
-  border: 1px solid #C9A84C;
-  border-bottom: none;
-  border-radius: 23px 23px 0 0;
-}
-.crest-bottom::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  top: -1px;
-  border: 1px solid rgba(201, 168, 76, 0.4);
-  border-bottom: none;
-  border-radius: 18px 18px 0 0;
+  object-fit: fill;
 }
 
 /* ====== Stars ====== */
