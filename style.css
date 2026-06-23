@@ -198,25 +198,12 @@ body {
   font-family: "Allura", cursive;
   font-size: 30px;
   color: #DAA520;
-  background: linear-gradient(135deg, #F7D875 0%, #DAA520 50%, #B8860B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   padding: 0 6px;
   display: inline-block;
   min-width: 130px;
   line-height: 1;
-  position: relative;
-}
-.cursive-name::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 6px;
-  right: 6px;
-  height: 1.5px;
-  background: #000;
+  border-bottom: 1.5px solid #000;
 }
 
 .course-text {
@@ -259,20 +246,11 @@ body {
   font-style: normal;
   font-size: 22px;
   color: #000000;
+  border-bottom: 1px solid #000;
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
   line-height: 1;
-  position: relative;
-}
-.signature-name::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: #000;
 }
 
 .label-dark {
@@ -290,20 +268,11 @@ body {
   font-style: normal;
   font-size: 16px;
   color: #000000;
+  border-bottom: 1px solid #000;
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
   line-height: 1;
-  position: relative;
-}
-.nit-footer::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: #000;
 }
 
 .stamp-footer img {
