@@ -64,7 +64,7 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Frame: 3 concentric borders ====== */
+/* ====== Frame: Fantasy style (ejemplo2) ====== */
 
 .certificate-frame::before {
   content: '';
@@ -73,7 +73,7 @@ body {
   left: 4px;
   right: 4px;
   bottom: 4px;
-  border: 2.5px solid #DAA520;
+  border: 3px solid #DAA520;
   pointer-events: none;
   z-index: 4;
 }
@@ -81,170 +81,184 @@ body {
 .certificate-frame::after {
   content: '';
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
   border: 1.5px solid #DAA520;
   pointer-events: none;
   z-index: 4;
 }
 
-.frame-inner {
+.frame-inner2 {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  border: 0.5px solid rgba(218, 165, 32, 0.3);
+  top: 22px;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  border: 1px dashed rgba(218, 165, 32, 0.25);
   pointer-events: none;
   z-index: 4;
 }
 
-/* ====== Ornate Corners (filigree rosette style) ====== */
+/* ====== Fantasy Gothic Corners ====== */
 
-.co-tl, .co-tr, .co-bl, .co-br {
+.co-tl2, .co-tr2, .co-bl2, .co-br2 {
   position: absolute;
-  width: 86px;
-  height: 86px;
+  width: 100px;
+  height: 100px;
   z-index: 5;
   pointer-events: none;
 }
-.co-tl { top: -3px; left: -3px; }
-.co-tr { top: -3px; right: -3px; }
-.co-bl { bottom: -3px; left: -3px; }
-.co-br { bottom: -3px; right: -3px; }
+.co-tl2 { top: -4px; left: -4px; }
+.co-tr2 { top: -4px; right: -4px; }
+.co-bl2 { bottom: -4px; left: -4px; }
+.co-br2 { bottom: -4px; right: -4px; }
 
-/* Outer filigree scroll */
-.co-tl::before, .co-tr::before, .co-bl::before, .co-br::before {
+/* Gothic arch outer sweep */
+.co-tl2::before, .co-tr2::before, .co-bl2::before, .co-br2::before {
   content: '';
   position: absolute;
-  width: 74px;
-  height: 74px;
-  border: 2px solid #DAA520;
-  border-radius: 0 0 999px 0;
-  border-top: none;
-  border-left: none;
-  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.15);
-}
-.co-tl::before { top: 4px; left: 4px; }
-.co-tr::before { top: 4px; right: 4px; transform: scaleX(-1); }
-.co-bl::before { bottom: 4px; left: 4px; transform: scaleY(-1); }
-.co-br::before { bottom: 4px; right: 4px; transform: scale(-1); }
-
-/* Inner scroll — nested arc */
-.co-tl::after, .co-tr::after, .co-bl::after, .co-br::after {
-  content: '';
-  position: absolute;
-  width: 52px;
-  height: 52px;
-  border: 1.5px solid rgba(218, 165, 32, 0.7);
+  width: 82px;
+  height: 82px;
+  border: 2.5px solid #DAA520;
   border-radius: 0 0 999px 0;
   border-top: none;
   border-left: none;
 }
-.co-tl::after { top: 12px; left: 12px; }
-.co-tr::after { top: 12px; right: 12px; transform: scaleX(-1); }
-.co-bl::after { bottom: 12px; left: 12px; transform: scaleY(-1); }
-.co-br::after { bottom: 12px; right: 12px; transform: scale(-1); }
+.co-tl2::before { top: 6px; left: 6px; }
+.co-tr2::before { top: 6px; right: 6px; transform: scaleX(-1); }
+.co-bl2::before { bottom: 6px; left: 6px; transform: scaleY(-1); }
+.co-br2::before { bottom: 6px; right: 6px; transform: scale(-1); }
 
-/* Central rosette — layered diamond inside circle */
-.co-tl .rosette, .co-tr .rosette, .co-bl .rosette, .co-br .rosette {
+/* Celtic interlocking ring */
+.co-tl2::after, .co-tr2::after, .co-bl2::after, .co-br2::after {
+  content: '';
   position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 1.5px solid #DAA520;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(218, 165, 32, 0.6);
   border-radius: 50%;
-  background: rgba(10, 22, 40, 0.92);
 }
-.co-tl .rosette { bottom: 11px; right: 11px; }
-.co-tr .rosette { bottom: 11px; left: 11px; }
-.co-bl .rosette { top: 11px; right: 11px; }
-.co-br .rosette { top: 11px; left: 11px; }
+.co-tl2::after { bottom: 16px; right: 16px; }
+.co-tr2::after { bottom: 16px; left: 16px; }
+.co-bl2::after { top: 16px; right: 16px; }
+.co-br2::after { top: 16px; left: 16px; }
 
-.co-tl .rosette::before, .co-tr .rosette::before, .co-bl .rosette::before, .co-br .rosette::before {
+/* Center gem — diamond shape */
+.co-tl2 .gem, .co-tr2 .gem, .co-bl2 .gem, .co-br2 .gem {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #DAA520;
+  background: rgba(10, 22, 40, 0.92);
+  transform: rotate(45deg);
+}
+.co-tl2 .gem { bottom: 29px; right: 29px; }
+.co-tr2 .gem { bottom: 29px; left: 29px; }
+.co-bl2 .gem { top: 29px; right: 29px; }
+.co-br2 .gem { top: 29px; left: 29px; }
+
+.co-tl2 .gem::before, .co-tr2 .gem::before, .co-bl2 .gem::before, .co-br2 .gem::before {
   content: '';
   position: absolute;
   top: 3px;
   left: 3px;
   right: 3px;
   bottom: 3px;
-  border: 1px solid rgba(218, 165, 32, 0.5);
-  border-radius: 50%;
+  border: 1px solid rgba(218, 165, 32, 0.4);
+  transform: rotate(0deg);
 }
 
-/* ====== Center Crests (arched) ====== */
+/* ====== Crown Crest (top) ====== */
 
-.crest-top, .crest-bottom {
+.crown-top {
   position: absolute;
+  top: -2px;
   left: 50%;
   transform: translateX(-50%);
+  width: 80px;
+  height: 32px;
+  border: 2.5px solid #DAA520;
+  border-top: none;
+  border-radius: 0 0 32px 32px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(10,22,40,0.95), rgba(10,22,40,0.8));
   z-index: 5;
   pointer-events: none;
 }
-
-.crest-top {
-  top: -2px;
-  width: 64px;
-  height: 26px;
-  border: 2px solid #DAA520;
+.crown-top::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: -1px;
+  border: 1.5px solid rgba(218, 165, 32, 0.5);
   border-top: none;
   border-radius: 0 0 26px 26px;
-  background: radial-gradient(ellipse at 50% 100%, rgba(10,22,40,0.95), rgba(10,22,40,0.8));
 }
-.crest-top::before {
+.crown-top::after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
+  top: 12px;
+  left: 12px;
+  right: 12px;
   bottom: -1px;
-  border: 1.5px solid rgba(218, 165, 32, 0.6);
+  border: 1px solid rgba(218, 165, 32, 0.25);
   border-top: none;
-  border-radius: 0 0 21px 21px;
-}
-.crest-top::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: -1px;
-  border: 1px solid rgba(218, 165, 32, 0.3);
-  border-top: none;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 20px 20px;
 }
 
-.crest-bottom {
+/* Crown spires */
+.crown-top .spire-l, .crown-top .spire-r {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  border: 1.5px solid #DAA520;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  background: rgba(10,22,40,0.95);
+}
+.crown-top .spire-l { top: -9px; left: 6px; }
+.crown-top .spire-r { top: -9px; right: 6px; }
+
+/* ====== Base Crest (bottom) ====== */
+
+.crown-bottom {
+  position: absolute;
   bottom: -2px;
-  width: 64px;
-  height: 26px;
-  border: 2px solid #DAA520;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 32px;
+  border: 2.5px solid #DAA520;
+  border-bottom: none;
+  border-radius: 32px 32px 0 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(10,22,40,0.95), rgba(10,22,40,0.8));
+  z-index: 5;
+  pointer-events: none;
+}
+.crown-bottom::before {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  right: 6px;
+  top: -1px;
+  border: 1.5px solid rgba(218, 165, 32, 0.5);
   border-bottom: none;
   border-radius: 26px 26px 0 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(10,22,40,0.95), rgba(10,22,40,0.8));
 }
-.crest-bottom::before {
+.crown-bottom::after {
   content: '';
   position: absolute;
-  bottom: 5px;
-  left: 5px;
-  right: 5px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
   top: -1px;
-  border: 1.5px solid rgba(218, 165, 32, 0.6);
+  border: 1px solid rgba(218, 165, 32, 0.25);
   border-bottom: none;
-  border-radius: 21px 21px 0 0;
-}
-.crest-bottom::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  top: -1px;
-  border: 1px solid rgba(218, 165, 32, 0.3);
-  border-bottom: none;
-  border-radius: 16px 16px 0 0;
+  border-radius: 20px 20px 0 0;
 }
 
 /* ====== Stars ====== */
