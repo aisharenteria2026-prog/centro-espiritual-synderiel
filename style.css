@@ -57,7 +57,7 @@ body {
   text-align: center;
   position: relative;
 
-  background: radial-gradient(ellipse at 50% 42%, #b8dced 0%, #8dbddb 18%, #5a90b8 40%, #3a6078 65%, #1e3048 100%);
+  background: radial-gradient(ellipse at 50% 42%, #d4edf8 0%, #a8d4ee 18%, #6bb0d4 40%, #4080a8 65%, #286080 100%);
 
   font-family: "Playfair Display", serif;
 
@@ -465,13 +465,13 @@ body {
 .cursive-name {
   font-family: "Allura", cursive;
   font-size: 32px;
-  color: #DAA520;
+  color: #000;
   padding: 0 6px 3px;
   display: inline-block;
   min-width: 130px;
   line-height: 1;
   border-bottom: 2.5px solid #000;
-  text-shadow: 0 0 0.5px #DAA520, 0 0 0.5px #DAA520;
+  text-shadow: 0 0 1px #000, 0 0 1px #000;
 }
 
 .course-text {
