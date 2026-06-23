@@ -90,7 +90,7 @@ body {
   left: 20px;
   right: 20px;
   bottom: 20px;
-  border: 1px dashed rgba(197, 165, 90, 0.4);
+  border: 1px solid rgba(197, 165, 90, 0.25);
   pointer-events: none;
   z-index: 3;
 }
@@ -222,7 +222,6 @@ body {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #DAA520;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   margin: 0 0 2px 0;
   line-height: 1.2;
   position: relative;
@@ -234,7 +233,6 @@ body {
   font-style: italic;
   font-weight: 400;
   color: #DAA520;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 2;
 }
