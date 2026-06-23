@@ -187,8 +187,7 @@ body {
 .cursive-name {
   font-family: "Allura", cursive;
   font-size: 30px;
-  color: #DAA520;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #000000;
   padding: 0 6px;
   display: inline-block;
   min-width: 130px;
