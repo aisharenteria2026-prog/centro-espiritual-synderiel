@@ -83,17 +83,7 @@ body {
   z-index: 3;
 }
 
-.certificate-frame::after {
-  content: '';
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  border: 1px solid rgba(197, 165, 90, 0.35);
-  pointer-events: none;
-  z-index: 3;
-}
+
 
 /* ====== Diamond Corners ====== */
 
