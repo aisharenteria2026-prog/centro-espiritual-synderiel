@@ -37,7 +37,7 @@ body {
 #download-btn {
   width: 100%;
   padding: 10px;
-  background: #B8963C;
+  background: #FFD700;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -61,58 +61,87 @@ body {
 
   font-family: "Playfair Display", serif;
 
-  border: 1px solid #B8963C;
+  border: 1px solid #FFD700;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
 .certificate-frame::before {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 1px solid rgba(185, 150, 60, 0.35);
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid #FFD700;
   pointer-events: none;
   z-index: 3;
 }
 
-/* ====== Filigree Corners ====== */
-
-.filigree-corner {
+.certificate-frame::after {
+  content: '';
   position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid #FFD700;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ====== Mandala Corners ====== */
+
+.mandala-corner {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  z-index: 6;
+  pointer-events: none;
+  border-right: 1.5px solid #FFD700;
+  border-bottom: 1.5px solid #FFD700;
+  border-radius: 0 0 72px 0;
+  border-right-style: double;
+  border-bottom-style: double;
+}
+
+.mandala-corner::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
   width: 52px;
   height: 52px;
-  z-index: 5;
-  pointer-events: none;
-}
-.filigree-corner::before {
-  content: '';
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 40px;
-  height: 40px;
-  border-right: 1px solid #B8963C;
-  border-bottom: 1px solid #B8963C;
-  border-radius: 0 0 32px 0;
-}
-.filigree-corner::after {
-  content: '';
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 24px;
-  height: 24px;
-  border-right: 1px solid #B8963C;
-  border-bottom: 1px solid #B8963C;
-  border-radius: 0 0 20px 0;
+  border: 1px solid #FFD700;
+  border-radius: 50%;
+  background: rgba(10, 22, 40, 0.92);
+  box-shadow:
+    inset 0 0 0 4px rgba(10, 22, 40, 0.95),
+    inset 0 0 0 5px #FFD700,
+    inset 0 0 0 10px rgba(10, 22, 40, 0.95),
+    inset 0 0 0 11px #FFD700,
+    inset 0 0 0 16px rgba(10, 22, 40, 0.95);
 }
 
-.fc-tl { top: -1px; left: -1px; }
-.fc-tr { top: -1px; right: -1px; transform: rotate(90deg); }
-.fc-bl { bottom: -1px; left: -1px; transform: rotate(-90deg); }
-.fc-br { bottom: -1px; right: -1px; transform: rotate(180deg); }
+.mandala-corner::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #FFD700;
+  transform: rotate(45deg);
+  background: rgba(10, 22, 40, 0.95);
+  box-shadow:
+    inset 0 0 0 3px rgba(10, 22, 40, 0.95),
+    inset 0 0 0 4px #FFD700,
+    inset 0 0 0 7px rgba(10, 22, 40, 0.95);
+}
+
+.mc-tl { top: -2px; left: -2px; }
+.mc-tr { top: -2px; right: -2px; transform: rotate(90deg); }
+.mc-bl { bottom: -2px; left: -2px; transform: rotate(-90deg); }
+.mc-br { bottom: -2px; right: -2px; transform: rotate(180deg); }
 
 /* ====== Top / Bottom Crest ====== */
 
@@ -121,11 +150,11 @@ body {
   top: -1px;
   left: 50%;
   transform: translateX(-50%);
-  width: 56px;
-  height: 26px;
-  border: 1.5px solid #B8963C;
+  width: 60px;
+  height: 28px;
+  border: 1.5px solid #FFD700;
   border-top: none;
-  border-radius: 0 0 28px 28px;
+  border-radius: 0 0 30px 30px;
   background: rgba(10, 22, 40, 0.95);
   z-index: 5;
   pointer-events: none;
@@ -137,9 +166,9 @@ body {
   left: 5px;
   right: 5px;
   bottom: -1px;
-  border: 1px solid rgba(197, 165, 90, 0.4);
+  border: 1px solid #FFD700;
   border-top: none;
-  border-radius: 0 0 23px 23px;
+  border-radius: 0 0 25px 25px;
 }
 
 .crest-bottom {
@@ -147,11 +176,11 @@ body {
   bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
-  width: 56px;
-  height: 26px;
-  border: 1.5px solid #B8963C;
+  width: 60px;
+  height: 28px;
+  border: 1.5px solid #FFD700;
   border-bottom: none;
-  border-radius: 28px 28px 0 0;
+  border-radius: 30px 30px 0 0;
   background: rgba(10, 22, 40, 0.95);
   z-index: 5;
   pointer-events: none;
@@ -163,9 +192,9 @@ body {
   left: 5px;
   right: 5px;
   top: -1px;
-  border: 1px solid rgba(197, 165, 90, 0.4);
+  border: 1px solid #FFD700;
   border-bottom: none;
-  border-radius: 23px 23px 0 0;
+  border-radius: 25px 25px 0 0;
 }
 
 /* ====== Stars ====== */
