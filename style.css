@@ -52,7 +52,7 @@ body {
   width: 750px;
   height: 1060px;
   box-sizing: border-box;
-  padding: 80px 65px 70px;
+  padding: 55px 65px 35px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -216,7 +216,7 @@ body {
 
 .subtitle-text {
   font-size: 17px;
-  margin: 0 0 14px 0;
+  margin: 0 0 22px 0;
 }
 
 .body-dark {
@@ -246,7 +246,7 @@ body {
 .course-text {
   font-size: 24px;
   letter-spacing: 2px;
-  margin: 7px 0 4px 0;
+  margin: 12px 0 6px 0;
 }
 
 .slogan-text {
@@ -265,7 +265,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 92%;
-  margin: 12px auto 0 auto;
+  margin: 24px auto 0 auto;
   position: relative;
   z-index: 2;
 }
