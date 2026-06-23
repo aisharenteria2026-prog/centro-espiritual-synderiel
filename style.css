@@ -203,7 +203,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid #000000;
+  border-bottom: 1.5px solid #000;
   padding: 0 6px;
   display: inline-block;
   min-width: 130px;
