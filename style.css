@@ -139,13 +139,14 @@ body {
 
 .cursive-name {
   font-family: "Allura", cursive;
-  font-size: 30px;
+  font-size: 32px;
   color: #DAA520;
   padding: 0 6px 3px;
   display: inline-block;
   min-width: 130px;
   line-height: 1;
   border-bottom: 2.5px solid #000;
+  text-shadow: 0 0 0.5px #DAA520, 0 0 0.5px #DAA520;
 }
 
 .course-text {
