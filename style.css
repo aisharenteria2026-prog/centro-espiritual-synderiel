@@ -61,94 +61,70 @@ body {
   font-family: "Playfair Display", serif;
 
   border: 2px solid #DAA520;
-  box-shadow: 0 0 0 6px #0a1628, 0 0 0 9px #DAA520, 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 0 20px #0a1628,
+    0 0 0 23px #DAA520,
+    0 0 0 36px #0a1628,
+    0 0 0 40px #DAA520,
+    0 0 50px rgba(0, 0, 0, 0.4);
 }
 
-/* ====== Art Deco stepped corners ====== */
+/* ====== Crests (top and bottom center) ====== */
 
-.step-corner {
-  position: absolute;
-  z-index: 5;
-  pointer-events: none;
-}
-
-/* Shared step properties */
-.step-corner .s {
-  position: absolute;
-  border-style: solid;
-  border-color: #DAA520;
-}
-
-.step-corner .fill {
-  position: absolute;
-  background: #DAA520;
-}
-
-/* TL corner */
-.step-corner.tl .s1 { top: 0; left: 0; width: 30px; height: 30px; border-width: 2px; border-right: none; border-bottom: none; border-radius: 0 0 0 0; }
-.step-corner.tl .s2 { top: 6px; left: 6px; width: 18px; height: 18px; border-width: 2px; border-right: none; border-bottom: none; }
-.step-corner.tl .s3 { top: 12px; left: 12px; width: 6px; height: 6px; border-width: 2px; border-right: none; border-bottom: none; }
-.step-corner.tl .f  { top: 14px; left: 14px; width: 2px; height: 2px; }
-
-/* TR corner */
-.step-corner.tr .s1 { top: 0; right: 0; width: 30px; height: 30px; border-width: 2px; border-left: none; border-bottom: none; }
-.step-corner.tr .s2 { top: 6px; right: 6px; width: 18px; height: 18px; border-width: 2px; border-left: none; border-bottom: none; }
-.step-corner.tr .s3 { top: 12px; right: 12px; width: 6px; height: 6px; border-width: 2px; border-left: none; border-bottom: none; }
-.step-corner.tr .f  { top: 14px; right: 14px; width: 2px; height: 2px; }
-
-/* BL corner */
-.step-corner.bl .s1 { bottom: 0; left: 0; width: 30px; height: 30px; border-width: 2px; border-right: none; border-top: none; }
-.step-corner.bl .s2 { bottom: 6px; left: 6px; width: 18px; height: 18px; border-width: 2px; border-right: none; border-top: none; }
-.step-corner.bl .s3 { bottom: 12px; left: 12px; width: 6px; height: 6px; border-width: 2px; border-right: none; border-top: none; }
-.step-corner.bl .f  { bottom: 14px; left: 14px; width: 2px; height: 2px; }
-
-/* BR corner */
-.step-corner.br .s1 { bottom: 0; right: 0; width: 30px; height: 30px; border-width: 2px; border-left: none; border-top: none; }
-.step-corner.br .s2 { bottom: 6px; right: 6px; width: 18px; height: 18px; border-width: 2px; border-left: none; border-top: none; }
-.step-corner.br .s3 { bottom: 12px; right: 12px; width: 6px; height: 6px; border-width: 2px; border-left: none; border-top: none; }
-.step-corner.br .f  { bottom: 14px; right: 14px; width: 2px; height: 2px; }
-
-/* ====== Art Deco center ornaments (top & bottom) ====== */
-
-.ornament {
+.crest {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
   pointer-events: none;
 }
-.ornament.top { top: 0; }
-.ornament.bot { bottom: 0; }
+.crest.top { top: 30px; }
+.crest.bot { bottom: 30px; }
 
-.ornament .bar {
+.crest .arch {
+  width: 52px;
+  height: 22px;
+  border: 2px solid #DAA520;
+  border-bottom: none;
+  border-radius: 26px 26px 0 0;
   position: absolute;
-  height: 3px;
-  background: #DAA520;
-  top: 13px;
-  width: 35px;
+  left: 50%;
+  margin-left: -26px;
 }
-.ornament .bar-l { left: -55px; }
-.ornament .bar-r { right: -55px; left: auto; }
+.crest.bot .arch {
+  transform: scaleY(-1);
+}
 
-.ornament .d1 {
+.crest .arch-in {
+  width: 34px;
+  height: 13px;
+  border: 1.5px solid #DAA520;
+  border-bottom: none;
+  border-radius: 17px 17px 0 0;
   position: absolute;
-  width: 10px;
-  height: 10px;
+  left: 50%;
+  margin-left: -17px;
+  top: 6px;
+}
+.crest.bot .arch-in {
+  transform: scaleY(-1);
+  top: auto;
+  bottom: 6px;
+}
+
+.crest .gem {
+  width: 6px;
+  height: 6px;
   background: #DAA520;
   transform: rotate(45deg);
-  top: 9px;
-  left: 50%;
-  margin-left: -5px;
-}
-.ornament .d2 {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #DAA520;
-  transform: rotate(45deg);
-  top: 12px;
   left: 50%;
-  margin-left: -2px;
+  margin-left: -3px;
+  top: 10px;
+}
+.crest.bot .gem {
+  top: auto;
+  bottom: 10px;
 }
 
 /* ====== Stars ====== */
