@@ -1,5 +1,5 @@
-function removeStampBackground() {
-  var img = document.getElementById("stamp-img");
+function removeStampBackground(imgId) {
+  var img = document.getElementById(imgId);
   if (!img) return;
 
   function process() {
@@ -68,5 +68,6 @@ function generatePDF() {
 }
 
 window.addEventListener("DOMContentLoaded", function () {
-  removeStampBackground();
+  removeStampBackground("stamp-top");
+  removeStampBackground("stamp-footer");
 });
