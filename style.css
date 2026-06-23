@@ -55,8 +55,6 @@ body {
   padding: 40px 70px 25px;
   text-align: center;
   position: relative;
-  overflow: hidden;
-
   background: radial-gradient(ellipse at 50% 42%, #80b5d6 0%, #5a9ac4 18%, #2a6a9a 40%, #0f3058 65%, #0a1628 100%);
 
   font-family: "Playfair Display", serif;
@@ -85,6 +83,19 @@ body {
   right: 14px;
   bottom: 14px;
   border: 1.5px solid #C9A84C;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* ====== Third inner decorative border ====== */
+
+.certificate-frame .inner-border {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  border: 0.5px solid rgba(201, 168, 76, 0.35);
   pointer-events: none;
   z-index: 4;
 }
@@ -280,12 +291,12 @@ body {
 .cursive-name {
   font-family: "Allura", cursive;
   font-size: 30px;
-  color: #000000;
+  color: #DAA520;
   padding: 0 6px;
   display: inline-block;
   min-width: 130px;
   line-height: 1;
-  border-bottom: 1.5px solid #000;
+  border-bottom: 1.5px solid #DAA520;
 }
 
 .course-text {
@@ -327,8 +338,8 @@ body {
   font-weight: bold;
   font-style: normal;
   font-size: 22px;
-  color: #000000;
-  border-bottom: 1px solid #000;
+  color: #DAA520;
+  border-bottom: 1px solid #DAA520;
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
@@ -349,8 +360,8 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: #000000;
-  border-bottom: 1px solid #000;
+  color: #DAA520;
+  border-bottom: 1px solid #DAA520;
   padding-bottom: 2px;
   width: 75%;
   margin: 0 auto 3px auto;
