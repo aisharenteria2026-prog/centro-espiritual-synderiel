@@ -64,116 +64,56 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Ornate corner rosettes ====== */
+/* ====== Inner gold border ====== */
 
-.corner {
+.frame-inner {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  z-index: 5;
-  pointer-events: none;
-}
-.corner.tl { top: -2px; left: -2px; }
-.corner.tr { top: -2px; right: -2px; transform: scaleX(-1); }
-.corner.bl { bottom: -2px; left: -2px; transform: scaleY(-1); }
-.corner.br { bottom: -2px; right: -2px; transform: scale(-1); }
-
-/* Sweeping curve from corner */
-.corner::before {
-  content: '';
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  border: 2.5px solid #DAA520;
-  border-radius: 0 0 44px 0;
-  border-top: none;
-  border-left: none;
-  top: 2px;
-  left: 2px;
-}
-
-/* Inner sweep */
-.corner::after {
-  content: '';
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border: 2px solid #DAA520;
-  border-radius: 0 0 26px 0;
-  border-top: none;
-  border-left: none;
-  top: 11px;
-  left: 11px;
-}
-
-/* Rosette medallion at corner center */
-.corner-rose {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #DAA520;
-  border-radius: 50%;
-  top: 13px;
-  left: 13px;
-  background: radial-gradient(circle, rgba(218,165,32,0.25) 0%, transparent 70%);
-}
-
-.corner-rose::before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
   border: 1.5px solid #DAA520;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 4;
+  pointer-events: none;
 }
 
-.corner-rose::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #DAA520;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+/* ====== Corner connector blocks ====== */
 
-/* ====== Connecting edge lines ====== */
-
-.edge-line {
+.corner-block {
   position: absolute;
+  width: 12px;
+  height: 12px;
   background: #DAA520;
   z-index: 5;
   pointer-events: none;
 }
-.edge-line.top {
-  top: 6px;
-  left: 48px;
-  right: 48px;
-  height: 1.5px;
+.corner-block.tl { top: 9px; left: 9px; }
+.corner-block.tr { top: 9px; right: 9px; }
+.corner-block.bl { bottom: 9px; left: 9px; }
+.corner-block.br { bottom: 9px; right: 9px; }
+
+/* ====== Mid-edge diamond accents ====== */
+
+.mid-diamond {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #DAA520;
+  z-index: 5;
+  pointer-events: none;
 }
-.edge-line.bot {
-  bottom: 6px;
-  left: 48px;
-  right: 48px;
-  height: 1.5px;
+.mid-diamond.top, .mid-diamond.bot {
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
 }
-.edge-line.left {
-  left: 6px;
-  top: 48px;
-  bottom: 48px;
-  width: 1.5px;
+.mid-diamond.top { top: 11px; }
+.mid-diamond.bot { bottom: 11px; }
+.mid-diamond.left, .mid-diamond.right {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
-.edge-line.right {
-  right: 6px;
-  top: 48px;
-  bottom: 48px;
-  width: 1.5px;
-}
+.mid-diamond.left { left: 11px; }
+.mid-diamond.right { right: 11px; }
 
 /* ====== Stars ====== */
 
