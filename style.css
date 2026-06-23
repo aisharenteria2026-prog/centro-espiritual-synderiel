@@ -64,74 +64,92 @@ body {
   box-shadow: 0 0 0 6px #0a1628, 0 0 0 9px #DAA520, 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Top and bottom accent bands ====== */
+/* ====== Art Deco stepped corners ====== */
 
-.frame-band {
+.step-corner {
   position: absolute;
-  left: 40px;
-  right: 40px;
   z-index: 5;
   pointer-events: none;
 }
-.frame-band.top { top: 12px; }
-.frame-band.bot { bottom: 12px; }
 
-.frame-band .line {
-  height: 0;
-  border-top: 1.5px solid #DAA520;
+/* Shared step properties */
+.step-corner .s {
   position: absolute;
-  left: 0;
-  right: 0;
+  border-style: solid;
+  border-color: #DAA520;
 }
-.frame-band .line1 { top: 0; }
-.frame-band .line2 { top: 12px; }
-.frame-band .line3 { top: 24px; }
-.frame-band .line4 { top: 36px; }
 
-/* Small diamond end-caps for the bands */
-.frame-band .cap {
+.step-corner .fill {
   position: absolute;
-  width: 6px;
-  height: 6px;
   background: #DAA520;
-  transform: rotate(45deg);
 }
-.frame-band.top .cap { top: 15px; }
-.frame-band.bot .cap { bottom: 15px; top: auto; }
-.frame-band .cap.l { left: -3px; }
-.frame-band .cap.r { right: -3px; left: auto; }
 
-/* ====== Corner diamonds ====== */
+/* TL corner */
+.step-corner.tl .s1 { top: 0; left: 0; width: 30px; height: 30px; border-width: 2px; border-right: none; border-bottom: none; border-radius: 0 0 0 0; }
+.step-corner.tl .s2 { top: 6px; left: 6px; width: 18px; height: 18px; border-width: 2px; border-right: none; border-bottom: none; }
+.step-corner.tl .s3 { top: 12px; left: 12px; width: 6px; height: 6px; border-width: 2px; border-right: none; border-bottom: none; }
+.step-corner.tl .f  { top: 14px; left: 14px; width: 2px; height: 2px; }
 
-.corner-gem {
+/* TR corner */
+.step-corner.tr .s1 { top: 0; right: 0; width: 30px; height: 30px; border-width: 2px; border-left: none; border-bottom: none; }
+.step-corner.tr .s2 { top: 6px; right: 6px; width: 18px; height: 18px; border-width: 2px; border-left: none; border-bottom: none; }
+.step-corner.tr .s3 { top: 12px; right: 12px; width: 6px; height: 6px; border-width: 2px; border-left: none; border-bottom: none; }
+.step-corner.tr .f  { top: 14px; right: 14px; width: 2px; height: 2px; }
+
+/* BL corner */
+.step-corner.bl .s1 { bottom: 0; left: 0; width: 30px; height: 30px; border-width: 2px; border-right: none; border-top: none; }
+.step-corner.bl .s2 { bottom: 6px; left: 6px; width: 18px; height: 18px; border-width: 2px; border-right: none; border-top: none; }
+.step-corner.bl .s3 { bottom: 12px; left: 12px; width: 6px; height: 6px; border-width: 2px; border-right: none; border-top: none; }
+.step-corner.bl .f  { bottom: 14px; left: 14px; width: 2px; height: 2px; }
+
+/* BR corner */
+.step-corner.br .s1 { bottom: 0; right: 0; width: 30px; height: 30px; border-width: 2px; border-left: none; border-top: none; }
+.step-corner.br .s2 { bottom: 6px; right: 6px; width: 18px; height: 18px; border-width: 2px; border-left: none; border-top: none; }
+.step-corner.br .s3 { bottom: 12px; right: 12px; width: 6px; height: 6px; border-width: 2px; border-left: none; border-top: none; }
+.step-corner.br .f  { bottom: 14px; right: 14px; width: 2px; height: 2px; }
+
+/* ====== Art Deco center ornaments (top & bottom) ====== */
+
+.ornament {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #DAA520;
-  transform: rotate(45deg);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 5;
   pointer-events: none;
 }
-.corner-gem.tl { top: 6px; left: 6px; }
-.corner-gem.tr { top: 6px; right: 6px; }
-.corner-gem.bl { bottom: 6px; left: 6px; }
-.corner-gem.br { bottom: 6px; right: 6px; }
+.ornament.top { top: 0; }
+.ornament.bot { bottom: 0; }
 
-/* ====== Edge mid-point diamonds ====== */
-
-.edge-gem {
+.ornament .bar {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  height: 3px;
+  background: #DAA520;
+  top: 13px;
+  width: 35px;
+}
+.ornament .bar-l { left: -55px; }
+.ornament .bar-r { right: -55px; left: auto; }
+
+.ornament .d1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
   background: #DAA520;
   transform: rotate(45deg);
-  z-index: 5;
-  pointer-events: none;
+  top: 9px;
+  left: 50%;
+  margin-left: -5px;
 }
-.edge-gem.t  { top: 6px;    left: 50%;  margin-left: -2.5px; }
-.edge-gem.b  { bottom: 6px; left: 50%;  margin-left: -2.5px; }
-.edge-gem.l  { left: 6px;   top: 50%;   margin-top: -2.5px; }
-.edge-gem.r  { right: 6px;  top: 50%;   margin-top: -2.5px; }
+.ornament .d2 {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #DAA520;
+  transform: rotate(45deg);
+  top: 12px;
+  left: 50%;
+  margin-left: -2px;
+}
 
 /* ====== Stars ====== */
 
