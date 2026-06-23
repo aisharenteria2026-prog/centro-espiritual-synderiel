@@ -52,7 +52,7 @@ body {
   width: 1060px;
   height: 750px;
   box-sizing: border-box;
-  padding: 50px 55px 45px;
+  padding: 35px 40px 35px;
   text-align: center;
   position: relative;
 
@@ -64,56 +64,77 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ====== Inner gold border ====== */
+/* ====== Inner frame layers ====== */
 
-.frame-inner {
+.frame-l1 {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 2px solid #DAA520;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.frame-l2 {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
   border: 1.5px solid #DAA520;
   z-index: 4;
   pointer-events: none;
 }
 
-/* ====== Corner connector blocks ====== */
+/* ====== Layer 1 corner squares ====== */
 
-.corner-block {
+.l1-corner {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: #DAA520;
   z-index: 5;
   pointer-events: none;
 }
-.corner-block.tl { top: 9px; left: 9px; }
-.corner-block.tr { top: 9px; right: 9px; }
-.corner-block.bl { bottom: 9px; left: 9px; }
-.corner-block.br { bottom: 9px; right: 9px; }
+.l1-corner.tl { top: 10px; left: 10px; }
+.l1-corner.tr { top: 10px; right: 10px; }
+.l1-corner.bl { bottom: 10px; left: 10px; }
+.l1-corner.br { bottom: 10px; right: 10px; }
 
-/* ====== Mid-edge diamond accents ====== */
+/* ====== Layer 2 corner diamonds ====== */
 
-.mid-diamond {
+.l2-corner {
   position: absolute;
   width: 8px;
   height: 8px;
-  background: #DAA520;
+  border: 1.5px solid #DAA520;
+  transform: rotate(45deg);
   z-index: 5;
   pointer-events: none;
 }
-.mid-diamond.top, .mid-diamond.bot {
+.l2-corner.tl { top: 22px; left: 22px; }
+.l2-corner.tr { top: 22px; right: 22px; }
+.l2-corner.bl { bottom: 22px; left: 22px; }
+.l2-corner.br { bottom: 22px; right: 22px; }
+
+/* ====== Top and bottom crests ====== */
+
+.frame-crest {
+  position: absolute;
   left: 50%;
-  transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%);
+  width: 50px;
+  height: 24px;
+  z-index: 5;
+  pointer-events: none;
+  border: 2.5px solid #DAA520;
+  border-bottom: none;
+  border-radius: 25px 25px 0 0;
 }
-.mid-diamond.top { top: 11px; }
-.mid-diamond.bot { bottom: 11px; }
-.mid-diamond.left, .mid-diamond.right {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-.mid-diamond.left { left: 11px; }
-.mid-diamond.right { right: 11px; }
+.frame-crest.top { top: 4px; }
+.frame-crest.bot { bottom: 4px; transform: translateX(-50%) scaleY(-1); }
 
 /* ====== Stars ====== */
 
