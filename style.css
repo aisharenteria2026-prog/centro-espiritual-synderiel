@@ -196,8 +196,11 @@ body {
   font-size: 28px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #DAA520;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6), 0 0 12px rgba(218, 165, 32, 0.15);
+  color: #C89B2C;
+  text-shadow:
+    -1px -1px 2px rgba(255, 215, 0, 0.35),
+    0 0 6px rgba(218, 165, 32, 0.15),
+    1px 1px 3px rgba(0, 0, 0, 0.6);
   margin: 0 0 2px 0;
   line-height: 1.2;
   position: relative;
@@ -208,8 +211,10 @@ body {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
-  color: #DAA520;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  color: #C89B2C;
+  text-shadow:
+    -1px -1px 2px rgba(255, 215, 0, 0.3),
+    1px 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 2;
 }
@@ -234,8 +239,11 @@ body {
 .cursive-name {
   font-family: "Alex Brush", cursive;
   font-size: 30px;
-  color: #DAA520;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #C89B2C;
+  text-shadow:
+    -1px -1px 2px rgba(255, 215, 0, 0.3),
+    0 0 6px rgba(218, 165, 32, 0.15),
+    1px 1px 3px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(218, 165, 32, 0.6);
   padding: 0 6px;
   display: inline-block;
@@ -295,8 +303,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 13px;
-  color: #ffffff;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  color: #000000;
   margin: 0;
 }
 
@@ -305,8 +312,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: #DAA520;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  color: #000000;
   border-bottom: 1px solid rgba(218, 165, 32, 0.6);
   padding-bottom: 2px;
   width: 75%;
