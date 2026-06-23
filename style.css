@@ -482,10 +482,10 @@ body {
 
 .slogan-text {
   font-family: "Allura", cursive;
-  font-size: 26px;
+  font-size: 32px;
   color: #000;
   margin: 12px 0 6px 0;
-  text-shadow: 0 0 2px #000, 0 0 2px #000;
+  text-shadow: 0 0 1px #000, 0 0 1px #000;
 }
 
 .date-text {
