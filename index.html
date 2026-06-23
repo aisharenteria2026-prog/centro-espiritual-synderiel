@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=23" />
     <script src="html2canvas.min.js"></script>
     <script src="jspdf.umd.min.js"></script>
   </head>
@@ -40,39 +40,76 @@
 
       <div id="stars-container"></div>
 
-      <div class="inner-frame"></div>
-
-      <svg class="cscroll tl" width="56" height="56" viewBox="0 0 56 56">
-        <path d="M 0,4 C 0,42 42,0 54,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,11 C 0,33 33,0 44,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,18 C 0,24 24,0 34,0" fill="none" stroke="#DAA520" stroke-width="1.2"/>
-        <path d="M 7,14 C 11,10 10,7 14,7" fill="none" stroke="#DAA520" stroke-width="1"/>
-        <circle cx="3" cy="3" r="2" fill="#DAA520"/>
-      </svg>
-      <svg class="cscroll tr" width="56" height="56" viewBox="0 0 56 56">
-        <path d="M 0,4 C 0,42 42,0 54,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,11 C 0,33 33,0 44,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,18 C 0,24 24,0 34,0" fill="none" stroke="#DAA520" stroke-width="1.2"/>
-        <path d="M 7,14 C 11,10 10,7 14,7" fill="none" stroke="#DAA520" stroke-width="1"/>
-        <circle cx="3" cy="3" r="2" fill="#DAA520"/>
-      </svg>
-      <svg class="cscroll bl" width="56" height="56" viewBox="0 0 56 56">
-        <path d="M 0,4 C 0,42 42,0 54,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,11 C 0,33 33,0 44,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,18 C 0,24 24,0 34,0" fill="none" stroke="#DAA520" stroke-width="1.2"/>
-        <path d="M 7,14 C 11,10 10,7 14,7" fill="none" stroke="#DAA520" stroke-width="1"/>
-        <circle cx="3" cy="3" r="2" fill="#DAA520"/>
-      </svg>
-      <svg class="cscroll br" width="56" height="56" viewBox="0 0 56 56">
-        <path d="M 0,4 C 0,42 42,0 54,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,11 C 0,33 33,0 44,0" fill="none" stroke="#DAA520" stroke-width="1.5"/>
-        <path d="M 0,18 C 0,24 24,0 34,0" fill="none" stroke="#DAA520" stroke-width="1.2"/>
-        <path d="M 7,14 C 11,10 10,7 14,7" fill="none" stroke="#DAA520" stroke-width="1"/>
-        <circle cx="3" cy="3" r="2" fill="#DAA520"/>
-      </svg>
-
-      <div class="finial top"></div>
-      <div class="finial bot"></div>
+      <div class="frame-top">
+        <div class="ft-bar ft-bar1"></div>
+        <div class="ft-line ft-line1"></div>
+        <div class="ft-circles">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="ft-diamonds">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="ft-line ft-line2"></div>
+        <div class="ft-bar ft-bar2"></div>
+        <div class="ft-medallion tl"></div>
+        <div class="ft-medallion tr"></div>
+        <div class="ft-center"></div>
+        <div class="ft-corner tl"></div>
+        <div class="ft-corner tr"></div>
+      </div>
+      <div class="frame-bot">
+        <div class="fb-bar fb-bar1"></div>
+        <div class="fb-line fb-line1"></div>
+        <div class="fb-circles">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fb-diamonds">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fb-line fb-line2"></div>
+        <div class="fb-bar fb-bar2"></div>
+        <div class="fb-medallion bl"></div>
+        <div class="fb-medallion br"></div>
+        <div class="fb-center"></div>
+        <div class="fb-corner bl"></div>
+        <div class="fb-corner br"></div>
+      </div>
+      <div class="frame-left">
+        <div class="fl-bar fl-bar1"></div>
+        <div class="fl-line fl-line1"></div>
+        <div class="fl-circles">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fl-diamonds">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fl-line fl-line2"></div>
+        <div class="fl-bar fl-bar2"></div>
+        <div class="fl-medallion tl"></div>
+        <div class="fl-medallion bl"></div>
+      </div>
+      <div class="frame-right">
+        <div class="fr-bar fr-bar1"></div>
+        <div class="fr-line fr-line1"></div>
+        <div class="fr-circles">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fr-diamonds">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="fr-line fr-line2"></div>
+        <div class="fr-bar fr-bar2"></div>
+        <div class="fr-medallion tr"></div>
+        <div class="fr-medallion br"></div>
+      </div>
 
       <div class="stamp-top">
         <img id="stamp-top" src="sello.jpg" alt="Sello" width="110" style="width:110px" />
