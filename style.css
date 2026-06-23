@@ -32,6 +32,7 @@ body {
   padding: 8px;
   border-radius: 4px;
   border: none;
+  color: #000;
 }
 
 #download-btn {
@@ -56,7 +57,7 @@ body {
   text-align: center;
   position: relative;
 
-  background: radial-gradient(ellipse at 50% 42%, #80b5d6 0%, #5a9ac4 18%, #2a6a9a 40%, #0f3058 65%, #0a1628 100%);
+  background: radial-gradient(ellipse at 50% 42%, #b8dced 0%, #8dbddb 18%, #5a90b8 40%, #3a6078 65%, #1e3048 100%);
 
   font-family: "Playfair Display", serif;
 
