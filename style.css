@@ -61,12 +61,7 @@ body {
   font-family: "Playfair Display", serif;
 
   border: 2px solid #DAA520;
-  box-shadow:
-    0 0 0 6px #0a1628,
-    0 0 0 10px #DAA520,
-    0 0 0 22px #0a1628,
-    0 0 0 26px #DAA520,
-    0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 6px #0a1628, 0 0 0 10px #DAA520, 0 0 0 22px #0a1628, 0 0 0 26px #DAA520, 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 /* ====== Ornate corner lockets (all 4 corners) ====== */
