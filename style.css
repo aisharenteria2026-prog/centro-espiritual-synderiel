@@ -52,7 +52,7 @@ body {
   width: 850px;
   height: 601px;
   box-sizing: border-box;
-  padding: 40px 65px 35px;
+  padding: 30px 65px 35px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -122,13 +122,13 @@ body {
 
 .stamp-top {
   text-align: center;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   position: relative;
   z-index: 2;
 }
 
 .stamp-top img {
-  width: 42px;
+  width: 75px;
   height: auto;
 }
 
@@ -259,7 +259,7 @@ body {
 }
 
 .stamp-footer img {
-  width: 45px;
+  width: 70px;
   height: auto;
   display: block;
   margin: 0 auto;
